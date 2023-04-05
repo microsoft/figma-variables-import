@@ -1,0 +1,18 @@
+{
+	"$schema": "data:application/json,{\"type\": \"object\"}",
+	"Global": {
+		"Color": {
+			"Red": {
+				"$type": "color",
+				"$value": "#ff0000"
+			},
+			"Blue": {
+				"$type": "color",
+				"$value": "#0000ff"
+			}
+		}
+	},
+	"Error2": { "$value": "{Error}" },
+	"Error": { "$value": "{Global.Color.Red}", "$description": "A special version of Red for error states." },
+	"IconSize": { "$type": "dimension", "$value": "32px" }
+}

@@ -1,0 +1,9 @@
+{
+	"name": "Figma variables import",
+	"id": "1170488269625782824",
+	"api": "1.0.0",
+	"enableProposedApi": true,
+	"main": "build/controller.js",
+	"ui": "build/ui.html",
+	"editorType": ["figma"]
+}

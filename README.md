@@ -1,14 +1,14 @@
-# Figma Beta Variables Import
+# Figma Variables Import plugin
 
-Work in progress. Don't use this.
+This plugin for the beta version of Figma allows you to import design tokens in the [Design Token Community Group](https://design-tokens.github.io/community-group/format/) format as Figma Variables.
+
+It's a work in progress, and is not a supported product—just a little internal tool that we use.
 
 ## Setup
 
 ### Node.js
 
-Node.js is required to install and build the project.
-
-You can find it on the [Node.js downloads page](https://nodejs.org/en/download).
+Install [Node.js](https://nodejs.org/en/download) so you can build this project.
 
 ### Install
 
@@ -38,7 +38,7 @@ npm run build
 
 # The legal stuff
 
-© 2022 Microsoft. MIT license.
+© 2023 Microsoft. MIT license.
 
 ## Trademarks
 

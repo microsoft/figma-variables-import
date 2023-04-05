@@ -1,0 +1,70 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Generated files
+*.scss.ts
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+.bin
+dist.stats.json
+bower_components
+node_modules
+temp
+lib
+lib-amd
+lib-commonjs
+lib-es2015
+coverage
+dist
+build
+test-dependencies
+screenshots
+
+# Editor project files
+.vs/
+*.sublime-project
+*.sublime-workspace
+.idea
+/.settings/
+
+# NPM Install Temp
+__temp/
+
+# Logs
+*.log
+npminstall-log.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# NPM debug logs
+npm-debug.log.*
+
+*.swp
+
+# package manifest
+/package-manifest.json

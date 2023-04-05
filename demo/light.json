@@ -1,0 +1,1252 @@
+{
+	"NeutralForeground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				}
+			}
+		}
+	},
+	"NeutralForeground2": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.26}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				},
+				"BrandHover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				},
+				"BrandPressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				},
+				"BrandSelected": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				}
+			}
+		}
+	},
+	"NeutralForeground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.38}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.26}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.26}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.26}"
+				},
+				"BrandHover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				},
+				"BrandPressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				},
+				"BrandSelected": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				}
+			}
+		}
+	},
+	"NeutralForeground4": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.44}"
+				}
+			}
+		}
+	},
+	"NeutralForegroundDisabled": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.74}"
+				}
+			}
+		}
+	},
+	"NeutralForegroundInvertedDisabled": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.WhiteAlpha.40}"
+				}
+			}
+		}
+	},
+	"BrandForegroundLink": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.60}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.40}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				}
+			}
+		}
+	},
+	"NeutralForeground2Link": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.26}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				}
+			}
+		}
+	},
+	"CompoundBrandForeground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.60}"
+				}
+			}
+		}
+	},
+	"BrandForeground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				}
+			}
+		}
+	},
+	"BrandForeground2": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				}
+			}
+		}
+	},
+	"NeutralForeground1Static": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.14}"
+				}
+			}
+		}
+	},
+	"NeutralForegroundStaticInverted": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"NeutralForegroundInverted": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"NeutralForegroundInverted2": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"NeutralForegroundOnBrand": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"NeutralForegroundInvertedLink": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"BrandForegroundInverted": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.100}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.110}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.100}"
+				}
+			}
+		}
+	},
+	"BrandForegroundOnLight": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.50}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.60}"
+				}
+			}
+		}
+	},
+	"RedForeground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Red.Shade10}"
+				}
+			}
+		}
+	},
+	"RedForeground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Red.Primary}"
+				}
+			}
+		}
+	},
+	"GreenForeground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Green.Shade10}"
+				}
+			}
+		}
+	},
+	"GreenForeground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Green.Primary}"
+				}
+			}
+		}
+	},
+	"DarkOrangeForeground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.DarkOrange.Shade10}"
+				}
+			}
+		}
+	},
+	"DarkOrangeForeground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.DarkOrange.Primary}"
+				}
+			}
+		}
+	},
+	"YellowForeground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Yellow.Shade30}"
+				}
+			}
+		}
+	},
+	"YellowForeground2": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Yellow.Shade30}"
+				}
+			}
+		}
+	},
+	"NeutralBackground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.96}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.88}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.92}"
+				}
+			}
+		}
+	},
+	"NeutralBackground2": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.98}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.94}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.86}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.90}"
+				}
+			}
+		}
+	},
+	"NeutralBackground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.96}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.92}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.84}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.88}"
+				}
+			}
+		}
+	},
+	"NeutralBackground4": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.94}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.98}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.96}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"NeutralBackground5": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.92}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.96}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.94}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.98}"
+				}
+			}
+		}
+	},
+	"NeutralBackground6": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.90}"
+				}
+			}
+		}
+	},
+	"NeutralBackgroundInverted": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.16}"
+				}
+			}
+		}
+	},
+	"NeutralBackgroundStatic": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.20}"
+				}
+			}
+		}
+	},
+	"NeutralBackgroundAlpha": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.WhiteAlpha.50}"
+				}
+			}
+		}
+	},
+	"NeutralBackgroundAlpha2": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.WhiteAlpha.80}"
+				}
+			}
+		}
+	},
+	"SubtleBackground": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000000"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.96}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.88}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.92}"
+				},
+				"LightAlphaHover": {
+					"$type": "color",
+					"$value": "{Global.Color.WhiteAlpha.70}"
+				},
+				"LightAlphaPressed": {
+					"$type": "color",
+					"$value": "{Global.Color.WhiteAlpha.50}"
+				},
+				"LightAlphaSelected": {
+					"$type": "color",
+					"$value": "#00000000"
+				}
+			}
+		}
+	},
+	"SubtleBackgroundInverted": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000000"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.BlackAlpha.10}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.BlackAlpha.30}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.BlackAlpha.20}"
+				}
+			}
+		}
+	},
+	"TransparentBackground": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000000"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "#00000000"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "#00000000"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "#00000000"
+				}
+			}
+		}
+	},
+	"NeutralBackgroundDisabled": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.94}"
+				}
+			}
+		}
+	},
+	"NeutralBackgroundInvertedDisabled": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.WhiteAlpha.10}"
+				}
+			}
+		}
+	},
+	"NeutralStencil1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.90}"
+				}
+			}
+		}
+	},
+	"NeutralStencil2": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.98}"
+				}
+			}
+		}
+	},
+	"NeutralStencil1Alpha": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.BlackAlpha.10}"
+				}
+			}
+		}
+	},
+	"NeutralStencil2Alpha": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.BlackAlpha.5}"
+				}
+			}
+		}
+	},
+	"BackgroundOverlay": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.BlackAlpha.40}"
+				}
+			}
+		}
+	},
+	"ScrollbarOverlay": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.BlackAlpha.50}"
+				}
+			}
+		}
+	},
+	"BrandBackground": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.40}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.60}"
+				}
+			}
+		}
+	},
+	"CompoundBrandBackground": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.60}"
+				}
+			}
+		}
+	},
+	"BrandBackgroundStatic": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				}
+			}
+		}
+	},
+	"BrandBackground2": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.160}"
+				}
+			}
+		}
+	},
+	"BrandBackgroundInverted": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.160}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.140}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.150}"
+				}
+			}
+		}
+	},
+	"RedBackground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Red.Tint60}"
+				}
+			}
+		}
+	},
+	"RedBackground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Red.Primary}"
+				}
+			}
+		}
+	},
+	"GreenBackground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Green.Tint60}"
+				}
+			}
+		}
+	},
+	"GreenBackground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Green.Primary}"
+				}
+			}
+		}
+	},
+	"DarkOrangeBackground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.DarkOrange.Tint60}"
+				}
+			}
+		}
+	},
+	"DarkOrangeBackground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.DarkOrange.Primary}"
+				}
+			}
+		}
+	},
+	"YellowBackground1": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Yellow.Tint60}"
+				}
+			}
+		}
+	},
+	"YellowBackground3": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Yellow.Primary}"
+				}
+			}
+		}
+	},
+	"NeutralStrokeAccessible": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.38}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.34}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.30}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				}
+			}
+		}
+	},
+	"NeutralStroke1": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.82}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.78}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.70}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.74}"
+				}
+			}
+		}
+	},
+	"NeutralStroke2": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.88}"
+				}
+			}
+		}
+	},
+	"NeutralStroke3": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.94}"
+				}
+			}
+		}
+	},
+	"NeutralStrokeOnBrand": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"NeutralStrokeOnBrand2": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				},
+				"Selected": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"BrandStroke1": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				}
+			}
+		}
+	},
+	"BrandStroke2": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.140}"
+				}
+			}
+		}
+	},
+	"CompoundBrandStroke": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.80}"
+				},
+				"Hover": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.70}"
+				},
+				"Pressed": {
+					"$type": "color",
+					"$value": "{Global.Color.Brand.60}"
+				}
+			}
+		}
+	},
+	"NeutralStrokeDisabled": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Grey.88}"
+				}
+			}
+		}
+	},
+	"NeutralStrokeInvertedDisabled": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.WhiteAlpha.40}"
+				}
+			}
+		}
+	},
+	"TransparentStroke": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000000"
+				}
+			}
+		}
+	},
+	"TransparentStrokeInteractive": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000000"
+				}
+			}
+		}
+	},
+	"TransparentStrokeDisabled": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000000"
+				}
+			}
+		}
+	},
+	"NeutralStrokeAlpha": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.BlackAlpha.5}"
+				}
+			}
+		}
+	},
+	"StrokeFocus1": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.White}"
+				}
+			}
+		}
+	},
+	"StrokeFocus2": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Black}"
+				}
+			}
+		}
+	},
+	"RedBorder1": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Red.Tint40}"
+				}
+			}
+		}
+	},
+	"RedBorder2": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Red.Primary}"
+				}
+			}
+		}
+	},
+	"GreenBorder1": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Green.Tint40}"
+				}
+			}
+		}
+	},
+	"GreenBorder2": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Green.Primary}"
+				}
+			}
+		}
+	},
+	"DarkOrangeBorder1": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.DarkOrange.Tint40}"
+				}
+			}
+		}
+	},
+	"DarkOrangeBorder2": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.DarkOrange.Primary}"
+				}
+			}
+		}
+	},
+	"YellowBorder1": {
+		"Stroke": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "{Global.Color.Yellow.Tint40}"
+				}
+			}
+		}
+	},
+	"NeutralShadowAmbient": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#0000001f"
+				}
+			}
+		}
+	},
+	"NeutralShadowKey": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000024"
+				}
+			}
+		}
+	},
+	"NeutralShadowAmbientLighter": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#0000000f"
+				}
+			}
+		}
+	},
+	"NeutralShadowKeyLighter": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000012"
+				}
+			}
+		}
+	},
+	"NeutralShadowAmbientDarker": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000033"
+				}
+			}
+		}
+	},
+	"NeutralShadowKeyDarker": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#0000003d"
+				}
+			}
+		}
+	},
+	"BrandShadowAmbient": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#0000004d"
+				}
+			}
+		}
+	},
+	"BrandShadowKey": {
+		"Fill": {
+			"Color": {
+				"Rest": {
+					"$type": "color",
+					"$value": "#00000040"
+				}
+			}
+		}
+	}
+}

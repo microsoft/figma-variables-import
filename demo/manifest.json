@@ -1,0 +1,16 @@
+{
+	"name": "Web",
+	"collections": {
+		"Global": {
+			"modes": {
+				"Global": [ "global.json" ]
+			}
+		},
+		"Web alias": {
+			"modes": {
+				"Light": [ "light.json" ],
+				"Dark": [ "dark.json" ]
+			}
+		}
+	}
+}

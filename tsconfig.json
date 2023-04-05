@@ -1,0 +1,39 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"paths": {
+			"*": [
+				"src/*"
+			],
+			"react": [
+				"./node_modules/preact/compat/"
+			],
+			"react-dom": [
+				"./node_modules/preact/compat/"
+			]
+		},
+		"typeRoots": [
+			"./typings",
+			"./node_modules/@types",
+			"./node_modules/@figma"
+		],
+		"target": "es2021",
+		"jsx": "react",
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "es2022",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"rootDir": "src",
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"verbatimModuleSyntax": true
+	}
+}

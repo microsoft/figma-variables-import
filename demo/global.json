@@ -1,0 +1,3144 @@
+{
+	"Global": {
+		"Color": {
+			"Brand": {
+				"10": {
+					"$type": "color",
+					"$value": "#061724"
+				},
+				"20": {
+					"$type": "color",
+					"$value": "#082338"
+				},
+				"30": {
+					"$type": "color",
+					"$value": "#0a2e4a"
+				},
+				"40": {
+					"$type": "color",
+					"$value": "#0c3b5e"
+				},
+				"50": {
+					"$type": "color",
+					"$value": "#0e4775"
+				},
+				"60": {
+					"$type": "color",
+					"$value": "#0f548c"
+				},
+				"70": {
+					"$type": "color",
+					"$value": "#115ea3"
+				},
+				"80": {
+					"$type": "color",
+					"$value": "#0f6cbd"
+				},
+				"90": {
+					"$type": "color",
+					"$value": "#2886de"
+				},
+				"100": {
+					"$type": "color",
+					"$value": "#479ef5"
+				},
+				"110": {
+					"$type": "color",
+					"$value": "#62abf5"
+				},
+				"120": {
+					"$type": "color",
+					"$value": "#77b7f7"
+				},
+				"130": {
+					"$type": "color",
+					"$value": "#96c6fa"
+				},
+				"140": {
+					"$type": "color",
+					"$value": "#b4d6fa"
+				},
+				"150": {
+					"$type": "color",
+					"$value": "#cfe4fa"
+				},
+				"160": {
+					"$type": "color",
+					"$value": "#ebf3fc"
+				}
+			},
+			"Grey": {
+				"2": {
+					"$type": "color",
+					"$value": "#050505"
+				},
+				"4": {
+					"$type": "color",
+					"$value": "#0a0a0a"
+				},
+				"6": {
+					"$type": "color",
+					"$value": "#0f0f0f"
+				},
+				"8": {
+					"$type": "color",
+					"$value": "#141414"
+				},
+				"10": {
+					"$type": "color",
+					"$value": "#1a1a1a"
+				},
+				"12": {
+					"$type": "color",
+					"$value": "#1f1f1f"
+				},
+				"14": {
+					"$type": "color",
+					"$value": "#242424"
+				},
+				"16": {
+					"$type": "color",
+					"$value": "#292929"
+				},
+				"18": {
+					"$type": "color",
+					"$value": "#2e2e2e"
+				},
+				"20": {
+					"$type": "color",
+					"$value": "#333333"
+				},
+				"22": {
+					"$type": "color",
+					"$value": "#383838"
+				},
+				"24": {
+					"$type": "color",
+					"$value": "#3d3d3d"
+				},
+				"26": {
+					"$type": "color",
+					"$value": "#424242"
+				},
+				"28": {
+					"$type": "color",
+					"$value": "#474747"
+				},
+				"30": {
+					"$type": "color",
+					"$value": "#4d4d4d"
+				},
+				"32": {
+					"$type": "color",
+					"$value": "#525252"
+				},
+				"34": {
+					"$type": "color",
+					"$value": "#575757"
+				},
+				"36": {
+					"$type": "color",
+					"$value": "#5c5c5c"
+				},
+				"38": {
+					"$type": "color",
+					"$value": "#616161"
+				},
+				"40": {
+					"$type": "color",
+					"$value": "#666666"
+				},
+				"42": {
+					"$type": "color",
+					"$value": "#6b6b6b"
+				},
+				"44": {
+					"$type": "color",
+					"$value": "#707070"
+				},
+				"46": {
+					"$type": "color",
+					"$value": "#757575"
+				},
+				"48": {
+					"$type": "color",
+					"$value": "#7a7a7a"
+				},
+				"50": {
+					"$type": "color",
+					"$value": "#808080"
+				},
+				"52": {
+					"$type": "color",
+					"$value": "#858585"
+				},
+				"54": {
+					"$type": "color",
+					"$value": "#8a8a8a"
+				},
+				"56": {
+					"$type": "color",
+					"$value": "#8f8f8f"
+				},
+				"58": {
+					"$type": "color",
+					"$value": "#949494"
+				},
+				"60": {
+					"$type": "color",
+					"$value": "#999999"
+				},
+				"62": {
+					"$type": "color",
+					"$value": "#9e9e9e"
+				},
+				"64": {
+					"$type": "color",
+					"$value": "#a3a3a3"
+				},
+				"66": {
+					"$type": "color",
+					"$value": "#a8a8a8"
+				},
+				"68": {
+					"$type": "color",
+					"$value": "#adadad"
+				},
+				"70": {
+					"$type": "color",
+					"$value": "#b3b3b3"
+				},
+				"72": {
+					"$type": "color",
+					"$value": "#b8b8b8"
+				},
+				"74": {
+					"$type": "color",
+					"$value": "#bdbdbd"
+				},
+				"76": {
+					"$type": "color",
+					"$value": "#c2c2c2"
+				},
+				"78": {
+					"$type": "color",
+					"$value": "#c7c7c7"
+				},
+				"80": {
+					"$type": "color",
+					"$value": "#cccccc"
+				},
+				"82": {
+					"$type": "color",
+					"$value": "#d1d1d1"
+				},
+				"84": {
+					"$type": "color",
+					"$value": "#d6d6d6"
+				},
+				"86": {
+					"$type": "color",
+					"$value": "#dbdbdb"
+				},
+				"88": {
+					"$type": "color",
+					"$value": "#e0e0e0"
+				},
+				"90": {
+					"$type": "color",
+					"$value": "#e6e6e6"
+				},
+				"92": {
+					"$type": "color",
+					"$value": "#ebebeb"
+				},
+				"94": {
+					"$type": "color",
+					"$value": "#f0f0f0"
+				},
+				"96": {
+					"$type": "color",
+					"$value": "#f5f5f5"
+				},
+				"98": {
+					"$type": "color",
+					"$value": "#fafafa"
+				}
+			},
+			"WhiteAlpha": {
+				"5": {
+					"$type": "color",
+					"$value": "#ffffff0d"
+				},
+				"10": {
+					"$type": "color",
+					"$value": "#ffffff1a"
+				},
+				"20": {
+					"$type": "color",
+					"$value": "#ffffff33"
+				},
+				"30": {
+					"$type": "color",
+					"$value": "#ffffff4d"
+				},
+				"40": {
+					"$type": "color",
+					"$value": "#ffffff66"
+				},
+				"50": {
+					"$type": "color",
+					"$value": "#ffffff80"
+				},
+				"60": {
+					"$type": "color",
+					"$value": "#ffffff99"
+				},
+				"70": {
+					"$type": "color",
+					"$value": "#ffffffb3"
+				},
+				"80": {
+					"$type": "color",
+					"$value": "#ffffffcc"
+				},
+				"90": {
+					"$type": "color",
+					"$value": "#ffffffe6"
+				}
+			},
+			"BlackAlpha": {
+				"5": {
+					"$type": "color",
+					"$value": "#0000000d"
+				},
+				"10": {
+					"$type": "color",
+					"$value": "#0000001a"
+				},
+				"20": {
+					"$type": "color",
+					"$value": "#00000033"
+				},
+				"30": {
+					"$type": "color",
+					"$value": "#0000004d"
+				},
+				"40": {
+					"$type": "color",
+					"$value": "#00000066"
+				},
+				"50": {
+					"$type": "color",
+					"$value": "#00000080"
+				},
+				"60": {
+					"$type": "color",
+					"$value": "#00000099"
+				},
+				"70": {
+					"$type": "color",
+					"$value": "#000000b3"
+				},
+				"80": {
+					"$type": "color",
+					"$value": "#000000cc"
+				},
+				"90": {
+					"$type": "color",
+					"$value": "#000000e6"
+				}
+			},
+			"Grey10Alpha": {
+				"5": {
+					"$type": "color",
+					"$value": "#1a1a1a0d"
+				},
+				"10": {
+					"$type": "color",
+					"$value": "#1a1a1a1a"
+				},
+				"20": {
+					"$type": "color",
+					"$value": "#1a1a1a33"
+				},
+				"30": {
+					"$type": "color",
+					"$value": "#1a1a1a4d"
+				},
+				"40": {
+					"$type": "color",
+					"$value": "#1a1a1a66"
+				},
+				"50": {
+					"$type": "color",
+					"$value": "#1a1a1a80"
+				},
+				"60": {
+					"$type": "color",
+					"$value": "#1a1a1a99"
+				},
+				"70": {
+					"$type": "color",
+					"$value": "#1a1a1ab3"
+				},
+				"80": {
+					"$type": "color",
+					"$value": "#1a1a1acc"
+				},
+				"90": {
+					"$type": "color",
+					"$value": "#1a1a1ae6"
+				}
+			},
+			"Grey12Alpha": {
+				"5": {
+					"$type": "color",
+					"$value": "#1f1f1f0d"
+				},
+				"10": {
+					"$type": "color",
+					"$value": "#1f1f1f1a"
+				},
+				"20": {
+					"$type": "color",
+					"$value": "#1f1f1f33"
+				},
+				"30": {
+					"$type": "color",
+					"$value": "#1f1f1f4d"
+				},
+				"40": {
+					"$type": "color",
+					"$value": "#1f1f1f66"
+				},
+				"50": {
+					"$type": "color",
+					"$value": "#1f1f1f80"
+				},
+				"60": {
+					"$type": "color",
+					"$value": "#1f1f1f99"
+				},
+				"70": {
+					"$type": "color",
+					"$value": "#1f1f1fb3"
+				},
+				"80": {
+					"$type": "color",
+					"$value": "#1f1f1fcc"
+				},
+				"90": {
+					"$type": "color",
+					"$value": "#1f1f1fe6"
+				}
+			},
+			"Grey14Alpha": {
+				"5": {
+					"$type": "color",
+					"$value": "#2424240d"
+				},
+				"10": {
+					"$type": "color",
+					"$value": "#2424241a"
+				},
+				"20": {
+					"$type": "color",
+					"$value": "#24242433"
+				},
+				"30": {
+					"$type": "color",
+					"$value": "#2424244d"
+				},
+				"40": {
+					"$type": "color",
+					"$value": "#24242466"
+				},
+				"50": {
+					"$type": "color",
+					"$value": "#24242480"
+				},
+				"60": {
+					"$type": "color",
+					"$value": "#24242499"
+				},
+				"70": {
+					"$type": "color",
+					"$value": "#242424b3"
+				},
+				"80": {
+					"$type": "color",
+					"$value": "#242424cc"
+				},
+				"90": {
+					"$type": "color",
+					"$value": "#242424e6"
+				}
+			},
+			"White": {
+				"$type": "color",
+				"$value": "#ffffff"
+			},
+			"Black": {
+				"$type": "color",
+				"$value": "#000000"
+			},
+			"hcHyperlink": {
+				"$type": "color",
+				"$value": "#75e9fc",
+				"$extensions": {
+					"com.microsoft.systemcolor": "LinkText"
+				}
+			},
+			"hcHighlight": {
+				"$type": "color",
+				"$value": "#8ee3f0",
+				"$extensions": {
+					"com.microsoft.systemcolor": "Highlight"
+				}
+			},
+			"hcDisabled": {
+				"$type": "color",
+				"$value": "#a6a6a6",
+				"$extensions": {
+					"com.microsoft.systemcolor": "GrayText"
+				}
+			},
+			"hcCanvas": {
+				"$type": "color",
+				"$value": "#202020",
+				"$extensions": {
+					"com.microsoft.systemcolor": "Canvas"
+				}
+			},
+			"hcCanvasText": {
+				"$type": "color",
+				"$value": "#ffffff",
+				"$extensions": {
+					"com.microsoft.systemcolor": "CanvasText"
+				}
+			},
+			"hcHighlightText": {
+				"$type": "color",
+				"$value": "#263b50",
+				"$extensions": {
+					"com.microsoft.systemcolor": "HighlightText"
+				}
+			},
+			"hcButtonText": {
+				"$type": "color",
+				"$value": "#ffffff",
+				"$extensions": {
+					"com.microsoft.systemcolor": "ButtonText"
+				}
+			},
+			"hcButtonFace": {
+				"$type": "color",
+				"$value": "#202020",
+				"$extensions": {
+					"com.microsoft.systemcolor": "ButtonFace"
+				}
+			},
+			"DarkRed": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#130204"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#230308"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#420610"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#590815"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#690a19"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#750b1c"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#861b2c"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#962f3f"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#ac4f5e"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#d69ca5"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e9c7cd"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f9f0f2"
+				}
+			},
+			"Burgundy": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#1a0607"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#310b0d"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#5c1519"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#7d1d21"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#942228"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#a4262c"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#af393e"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#ba4d52"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#c86c70"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#e4afb2"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f0d3d4"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fbf4f4"
+				}
+			},
+			"Cranberry": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#200205"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#3b0509"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#6e0811"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#960b18"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#b10e1c"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#c50f1f"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#cc2635"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#d33f4c"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#dc626d"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#eeacb2"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f6d1d5"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fdf3f4"
+				}
+			},
+			"Red": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#210809"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#3f1011"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#751d1f"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#9f282b"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#bc2f32"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#d13438"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#d7494c"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#dc5e62"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#e37d80"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#f1bbbc"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f8dadb"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fdf6f6"
+				}
+			},
+			"DarkOrange": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#230900"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#411200"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#7a2101"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#a62d01"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#c43501"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#da3b01"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#de501c"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#e36537"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#e9835e"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#f4bfab"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f9dcd1"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fdf6f3"
+				}
+			},
+			"Bronze": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#1b0a01"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#321303"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#5e2405"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#7f3107"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#963a08"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#a74109"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#b2521e"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#bc6535"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#ca8057"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#e5bba4"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f1d9cc"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fbf5f2"
+				}
+			},
+			"Pumpkin": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#200d03"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#3d1805"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#712d09"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#9a3d0c"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#b6480e"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#ca5010"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#d06228"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#d77440"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#df8e64"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#efc4ad"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f7dfd2"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fdf7f4"
+				}
+			},
+			"Orange": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#271002"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#4a1e04"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#8a3707"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#bc4b09"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#de590b"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#f7630c"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#f87528"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#f98845"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#faa06b"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#fdcfb4"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#fee5d7"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fff9f5"
+				}
+			},
+			"Peach": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#291600"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#4d2a00"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#8f4e00"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#c26a00"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#e67e00"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#ff8c00"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#ff9a1f"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#ffa83d"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#ffba66"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#ffddb3"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#ffedd6"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fffaf5"
+				}
+			},
+			"Marigold": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#251a00"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#463100"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#835b00"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#b27c00"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#d39300"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#eaa300"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#edad1c"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#efb839"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#f2c661"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#f9e2ae"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#fcefd3"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fefbf4"
+				}
+			},
+			"Yellow": {
+				"Primary": {
+					"$type": "color",
+					"$value": "#fde300"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#e4cc00"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#c0ad00"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#817400"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#4c4400"
+				},
+				"Shade50": {
+					"$type": "color",
+					"$value": "#282400"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#fde61e"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#fdea3d"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#feee66"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#fef7b2"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#fffad6"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fffef5"
+				}
+			},
+			"Gold": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#1f1900"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#3a2f00"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#6c5700"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#937700"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#ae8c00"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#c19c00"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#c8a718"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#d0b232"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#dac157"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#ecdfa5"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f5eece"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fdfbf2"
+				}
+			},
+			"Brass": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#181202"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#2e2103"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#553e06"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#745408"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#89640a"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#986f0b"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#a47d1e"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#b18c34"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#c1a256"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#e0cea2"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#efe4cb"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fbf8f2"
+				}
+			},
+			"Brown": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#170e07"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#2b1a0e"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#50301a"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#6c4123"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#804d29"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#8e562e"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#9c663f"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#a97652"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#bb8f6f"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#ddc3b0"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#edded3"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#faf7f4"
+				}
+			},
+			"DarkBrown": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#0c0704"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#170c08"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#2b1710"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#3a1f15"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#452519"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#4d291c"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#623a2b"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#784d3e"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#946b5c"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#caada3"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e3d2cb"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f8f3f2"
+				}
+			},
+			"Lime": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#121b06"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#23330b"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#405f14"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#57811b"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#689920"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#73aa24"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#81b437"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#90be4c"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#a4cc6c"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#cfe5af"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e5f1d3"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f8fcf4"
+				}
+			},
+			"Forest": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#0c1501"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#162702"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#294903"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#376304"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#427505"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#498205"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#599116"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#6ba02b"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#85b44c"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#bdd99b"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#dbebc7"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f6faf0"
+				}
+			},
+			"Seafoam": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#002111"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#003d20"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#00723b"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#009b51"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#00b85f"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#00cc6a"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#19d279"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#34d889"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#5ae0a0"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#a8f0cd"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#cff7e4"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f3fdf8"
+				}
+			},
+			"LightGreen": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#031a02"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#063004"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#0b5a08"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#0e7a0b"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#11910d"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#13a10e"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#27ac22"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#3db838"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#5ec75a"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#a7e3a5"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#cef0cd"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f2fbf2"
+				}
+			},
+			"Green": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#031403"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#052505"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#094509"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#0c5e0c"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#0e700e"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#107c10"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#218c21"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#359b35"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#54b054"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#9fd89f"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#c9eac9"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f1faf1"
+				}
+			},
+			"DarkGreen": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#021102"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#032003"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#063b06"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#085108"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#0a5f0a"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#0b6a0b"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#1a7c1a"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#2d8e2d"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#4da64d"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#9ad29a"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#c6e7c6"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f0f9f0"
+				}
+			},
+			"LightTeal": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#001d1f"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#00373a"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#00666d"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#008b94"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#00a5af"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#00b7c3"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#18bfca"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#32c8d1"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#58d3db"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#a6e9ed"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#cef3f5"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f2fcfd"
+				}
+			},
+			"Teal": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#001516"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#012728"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#02494c"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#026467"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#037679"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#038387"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#159195"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#2aa0a4"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#4cb4b7"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#9bd9db"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#c7ebec"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f0fafa"
+				}
+			},
+			"DarkTeal": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#001010"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#001f1f"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#003939"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#004e4e"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#005c5c"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#006666"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#0e7878"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#218b8b"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#41a3a3"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#92d1d1"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#c2e7e7"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#eff9f9"
+				}
+			},
+			"Cyan": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#00181e"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#002e38"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#005669"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#00748f"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#008aa9"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#0099bc"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#18a4c4"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#31afcc"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#56bfd7"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#a4deeb"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#cdedf4"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f2fafc"
+				}
+			},
+			"Steel": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#000f12"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#001b22"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#00333f"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#004555"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#005265"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#005b70"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#0f6c81"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#237d92"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#4496a9"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#94c8d4"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#c3e1e8"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#eff7f9"
+				}
+			},
+			"LightBlue": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#091823"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#112d42"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#20547c"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#2c72a8"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#3487c7"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#3a96dd"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#4fa1e1"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#65ade5"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#83bdeb"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#bfddf5"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#dcedfa"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f6fafe"
+				}
+			},
+			"Blue": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#001322"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#002440"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#004377"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#005ba1"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#006cbf"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#0078d4"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#1a86d9"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#3595de"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#5caae5"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#a9d3f2"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#d0e7f8"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f3f9fd"
+				}
+			},
+			"RoyalBlue": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#000c16"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#00172a"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#002c4e"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#003b6a"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#00467e"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#004e8c"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#125e9a"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#286fa8"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#4a89ba"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#9abfdc"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#c7dced"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f0f6fa"
+				}
+			},
+			"DarkBlue": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#000910"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#00111f"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#002039"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#002b4e"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#00335c"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#003966"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#0e4a78"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#215c8b"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#4178a3"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#92b5d1"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#c2d6e7"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#eff4f9"
+				}
+			},
+			"Cornflower": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#0d1126"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#182047"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#2c3c85"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#3c51b4"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#4760d5"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#4f6bed"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#637cef"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#778df1"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#93a4f4"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#c8d1fa"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e1e6fc"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f7f9fe"
+				}
+			},
+			"Navy": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#00061d"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#000c36"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#001665"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#001e89"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#0023a2"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#0027b4"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#173bbd"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#3050c6"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#546fd2"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#a3b2e8"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#ccd5f3"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f2f4fc"
+				}
+			},
+			"Lavender": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#120f25"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#221d46"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#3f3682"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#5649b0"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#6656d1"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#7160e8"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#8172eb"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#9184ee"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#a79cf1"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#d2ccf8"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e7e4fb"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f9f8fe"
+				}
+			},
+			"Purple": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#0f0717"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#1c0e2b"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#341a51"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#46236e"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#532982"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#5c2e91"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#6b3f9e"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#7c52ab"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#9470bd"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#c6b1de"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e0d3ed"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f7f4fb"
+				}
+			},
+			"DarkPurple": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#0a0411"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#130820"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#240f3c"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#311552"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#3a1861"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#401b6c"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#512b7e"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#633e8f"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#7e5ca7"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#b9a3d3"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#d8cce7"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f5f2f9"
+				}
+			},
+			"Orchid": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#16101d"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#281e37"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#4c3867"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#674c8c"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#795aa6"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#8764b8"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#9373c0"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#a083c9"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#b29ad4"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#d7caea"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e9e2f4"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f9f8fc"
+				}
+			},
+			"Grape": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#160418"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#29072e"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#4c0d55"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#671174"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#7a1589"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#881798"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#952aa4"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#a33fb1"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#b55fc1"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#d9a7e0"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#eaceef"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#faf2fb"
+				}
+			},
+			"Berry": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#1f091d"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#3a1136"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#6d2064"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#932b88"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#af33a1"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#c239b3"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#c94cbc"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#d161c4"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#da7ed0"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#edbbe7"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f5daf2"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fdf5fc"
+				}
+			},
+			"Lilac": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#1c0b1f"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#35153a"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#63276d"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#863593"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#9f3faf"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#b146c2"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#ba58c9"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#c36bd1"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#cf87da"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#e6bfed"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f2dcf5"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fcf6fd"
+				}
+			},
+			"Pink": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#24091b"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#441232"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#80215d"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#ad2d7e"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#cd3595"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#e43ba6"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#e750b0"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#ea66ba"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#ef85c8"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#f7c0e3"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#fbddf0"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fef6fb"
+				}
+			},
+			"HotPink": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#240016"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#44002a"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#7f004e"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#ad006a"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#cc007e"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#e3008c"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#e61c99"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#ea38a6"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#ee5fb7"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#f7adda"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#fbd2eb"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fef4fa"
+				}
+			},
+			"Magenta": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#1f0013"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#390024"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#6b0043"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#91005a"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#ac006b"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#bf0077"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#c71885"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#ce3293"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#d957a8"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#eca5d1"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#f5cee6"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fcf2f9"
+				}
+			},
+			"Plum": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#13000c"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#240017"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#43002b"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#5a003b"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#6b0045"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#77004d"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#87105d"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#98246f"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#ad4589"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#d696c0"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e9c4dc"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#faf0f6"
+				}
+			},
+			"Beige": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#141313"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#252323"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#444241"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#5d5958"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#6e6968"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#7a7574"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#8a8584"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#9a9594"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#afabaa"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#d7d4d4"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#eae8e8"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#faf9f9"
+				}
+			},
+			"Mink": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#0f0e0e"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#1c1b1a"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#343231"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#474443"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#54514f"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#5d5a58"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#706d6b"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#84817e"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#9e9b99"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#cecccb"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e5e4e3"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f8f8f8"
+				}
+			},
+			"Silver": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#151818"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#282d2e"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#4a5356"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#657174"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#78868a"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#859599"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#92a1a5"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#a0aeb1"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#b3bfc2"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#d8dfe0"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#eaeeef"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#fafbfb"
+				}
+			},
+			"Platinum": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#111314"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#1f2426"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#3b4447"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#505c60"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#5f6d71"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#69797e"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#79898d"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#89989d"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#a0adb2"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#cdd6d8"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#e4e9ea"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f8f9fa"
+				}
+			},
+			"Anchor": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#090a0b"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#111315"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#202427"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#2b3135"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#333a3f"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#394146"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#4d565c"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#626c72"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#808a90"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#bcc3c7"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#dbdfe1"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f6f7f8"
+				}
+			},
+			"Charcoal": {
+				"Shade50": {
+					"$type": "color",
+					"$value": "#090909"
+				},
+				"Shade40": {
+					"$type": "color",
+					"$value": "#111111"
+				},
+				"Shade30": {
+					"$type": "color",
+					"$value": "#202020"
+				},
+				"Shade20": {
+					"$type": "color",
+					"$value": "#2b2b2b"
+				},
+				"Shade10": {
+					"$type": "color",
+					"$value": "#333333"
+				},
+				"Primary": {
+					"$type": "color",
+					"$value": "#393939"
+				},
+				"Tint10": {
+					"$type": "color",
+					"$value": "#515151"
+				},
+				"Tint20": {
+					"$type": "color",
+					"$value": "#686868"
+				},
+				"Tint30": {
+					"$type": "color",
+					"$value": "#888888"
+				},
+				"Tint40": {
+					"$type": "color",
+					"$value": "#c4c4c4"
+				},
+				"Tint50": {
+					"$type": "color",
+					"$value": "#dfdfdf"
+				},
+				"Tint60": {
+					"$type": "color",
+					"$value": "#f7f7f7"
+				}
+			}
+		},
+		"Stroke": {
+			"Width": {
+				"None": {
+					"$type": "dimension",
+					"$value": "0px"
+				},
+				"05": {
+					"$type": "dimension",
+					"$value": "0.5px"
+				},
+				"10": {
+					"$type": "dimension",
+					"$value": "1px"
+				},
+				"15": {
+					"$type": "dimension",
+					"$value": "1.5px"
+				},
+				"20": {
+					"$type": "dimension",
+					"$value": "2px"
+				},
+				"30": {
+					"$type": "dimension",
+					"$value": "3px"
+				},
+				"40": {
+					"$type": "dimension",
+					"$value": "4px"
+				},
+				"60": {
+					"$type": "dimension",
+					"$value": "6px"
+				}
+			}
+		},
+		"Corner": {
+			"Radius": {
+				"None": {
+					"$type": "dimension",
+					"$value": "0px"
+				},
+				"20": {
+					"$type": "dimension",
+					"$value": "2px"
+				},
+				"40": {
+					"$type": "dimension",
+					"$value": "4px"
+				},
+				"60": {
+					"$type": "dimension",
+					"$value": "6px"
+				},
+				"80": {
+					"$type": "dimension",
+					"$value": "8px"
+				},
+				"120": {
+					"$type": "dimension",
+					"$value": "12px"
+				},
+				"Circular": {
+					"$type": "dimension",
+					"$value": "9999px"
+				}
+			}
+		},
+		"Size": {
+			"None": {
+				"$type": "dimension",
+				"$value": "0px"
+			},
+			"20": {
+				"$type": "dimension",
+				"$value": "2px"
+			},
+			"40": {
+				"$type": "dimension",
+				"$value": "4px"
+			},
+			"60": {
+				"$type": "dimension",
+				"$value": "6px"
+			},
+			"80": {
+				"$type": "dimension",
+				"$value": "8px"
+			},
+			"100": {
+				"$type": "dimension",
+				"$value": "10px"
+			},
+			"120": {
+				"$type": "dimension",
+				"$value": "12px"
+			},
+			"160": {
+				"$type": "dimension",
+				"$value": "16px"
+			},
+			"200": {
+				"$type": "dimension",
+				"$value": "20px"
+			},
+			"240": {
+				"$type": "dimension",
+				"$value": "24px"
+			},
+			"280": {
+				"$type": "dimension",
+				"$value": "28px"
+			},
+			"320": {
+				"$type": "dimension",
+				"$value": "32px"
+			},
+			"360": {
+				"$type": "dimension",
+				"$value": "36px"
+			},
+			"400": {
+				"$type": "dimension",
+				"$value": "40px"
+			},
+			"480": {
+				"$type": "dimension",
+				"$value": "48px"
+			},
+			"560": {
+				"$type": "dimension",
+				"$value": "56px"
+			},
+			"640": {
+				"$type": "dimension",
+				"$value": "64px"
+			},
+			"720": {
+				"$type": "dimension",
+				"$value": "72px"
+			},
+			"800": {
+				"$type": "dimension",
+				"$value": "80px"
+			},
+			"1200": {
+				"$type": "dimension",
+				"$value": "120px"
+			}
+		}
+	}
+}
