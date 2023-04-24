@@ -91,6 +91,7 @@ export function MainPage() {
 
 			setResults(newResults)
 		} catch (ex) {
+			console.error(ex)
 			newResults.push({
 				result: "error",
 				text: `Failed to import the token files: ${

@@ -4,7 +4,7 @@ import type { JsonToken } from "utils/tokens"
 
 export interface PluginMethods {
 	notify(message: string): void
-	importFiles(files: JsonFile[]): OperationResult[]
+	importFiles(files: JsonFile[]): Promise<OperationResult[]>
 }
 export type PluginProxy = PromisingArtist.CollabProxy<PluginMethods>
 export const PluginContext = createContext(undefined as unknown as PluginProxy)

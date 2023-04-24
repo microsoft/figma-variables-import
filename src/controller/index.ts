@@ -8,7 +8,7 @@ const _UI = PromisingArtist.collab<PluginMethods, UIMethods>(
 		notify(message) {
 			figma.notify(message)
 		},
-		importFiles(files) {
+		async importFiles(files) {
 			const results: OperationResult[] = []
 
 			// Parse all of the JSON before we start processing any tokens.
@@ -32,7 +32,7 @@ const _UI = PromisingArtist.collab<PluginMethods, UIMethods>(
 				}
 			}
 
-			results.push(...importTokens(parsedFiles, manifest))
+			results.push(...(await importTokens(parsedFiles, manifest)))
 
 			return results
 		},
