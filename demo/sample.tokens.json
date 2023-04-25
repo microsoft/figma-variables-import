@@ -12,7 +12,7 @@
 			}
 		}
 	},
-	"Error2": { "$value": "{Error}" },
-	"Error": { "$value": "{Global.Color.Red}", "$description": "A special version of Red for error states." },
+	"Error2": { "$type": "color", "$value": "{Error}" },
+	"Error": { "$type": "color", "$value": "{Global.Color.Red}", "$description": "A special version of Red for error states." },
 	"IconSize": { "$type": "dimension", "$value": "32px" }
 }

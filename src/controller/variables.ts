@@ -26,6 +26,14 @@ function tokenTypeToFigmaType($type: JsonTokenType): VariableResolvedDataType | 
 	}
 }
 
+/** Returns true if a variable or variable collection is in a remote library, whether or not it's been brought local. */
+// function isInLibrary(varOrCollection: Variable | LibraryVariable): varOrCollection is LibraryVariable
+// function isInLibrary(varOrCollection: VariableCollection | LibraryVariableCollection): varOrCollection is LibraryVariableCollection
+// function isInLibrary(varOrCollection: Variable | LibraryVariable | VariableCollection | LibraryVariableCollection): boolean
+// {
+// 	return !("id" in varOrCollection)
+// }
+
 interface QueuedUpdate {
 	figmaName: string
 	token: JsonToken
@@ -57,12 +65,26 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 	}
 
 	// First, we need to know what variables are already present, so we can update them if necessary.
-	const collectionsArray = figma.variables.getLocalVariableCollections()
-	const collections: Record<string, VariableCollection> = {}
-	for (const collection of collectionsArray) collections[collection.name] = collection
-	const variablesArray = figma.variables.getLocalVariables()
-	const variables: Record<string, Variable> = {}
-	for (const variable of variablesArray) variables[variable.name] = variable
+	const collections: Record<string, VariableCollection | LibraryVariableCollection> = {}
+	const variables: Record<string, Variable | LibraryVariable> = {}
+
+	{
+		// Remote / team library variables
+		// NOTE: As of writing this code, PluginAPI.teamLibrary was not present in the typings, so I changed them manually.
+		const remoteCollectionsArray = await figma.teamLibrary.getAvailableLibraryVariableCollectionsAsync()
+		for (const collection of remoteCollectionsArray)
+		{
+			collections[collection.name] = collection
+			const variablesArray = await figma.teamLibrary.getVariablesInLibraryCollectionAsync(collection.key)
+			for (const variable of variablesArray) variables[variable.name] = variable
+		}
+
+		// Local variables
+		const collectionsArray = figma.variables.getLocalVariableCollections()
+		for (const collection of collectionsArray) collections[collection.name] = collection
+		const variablesArray = figma.variables.getLocalVariables()
+		for (const variable of variablesArray) variables[variable.name] = variable
+	}
 
 	// Aliases can't be created until their target is, and we might see the alias before the target. So we have to maintain a queue
 	// of tokens to add and update, and go through it multiple times.
@@ -107,7 +129,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 
 			// First, if this is an alias, see if the target exists already.
 			const targetName = getAliasTargetName(update.token.$value)
-			let targetVariable: Variable | undefined = undefined
+			let targetVariable: Variable | LibraryVariable | undefined = undefined
 			if (targetName) {
 				const targetFigmaName = tokenNameToFigmaName(targetName)
 				targetVariable = variables[targetFigmaName]
@@ -123,8 +145,8 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 
 			// Okay, this either isn't an alias, or it's an alias to something that indeed exists, so we can continue.
 			// If the variable doesn't exist yet, create it now.
-			let collection: VariableCollection
-			let variable: Variable = variables[update.figmaName]
+			let collection: VariableCollection | LibraryVariableCollection
+			let variable: Variable | LibraryVariable | undefined = variables[update.figmaName]
 			let modeID: string | undefined = undefined
 			if (!variable) {
 				// This variable doesn't exist yet. First, create its collection and mode if necessary.
@@ -135,11 +157,21 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 					modeID = collection.modes[0].modeID
 					collection.renameMode(modeID, update.modeName)
 				}
+				else if (!("id" in collection))
+				{
+					// The variable doesn't exist, but it's in a remote collection that does.
+					results.push({ result: "error", text: `Failed to create ${update.figmaName} because it‘s defined in a different library.` })
+					continue
+				}
 
 				// Then we can create the variable itself.
 				variable = figma.variables.createVariable(update.figmaName, collection.id, figmaType)
 				variables[update.figmaName] = variable
 				variablesCreated++
+			} else if (!("id" in variable))
+			{
+				results.push({ result: "error", text: `Failed to update ${update.figmaName} because it‘s defined in a different library.` })
+				continue
 			} else {
 				otherUpdatesCount++
 				collection = figma.variables.getVariableCollectionById(variable.variableCollectionId)!
@@ -148,10 +180,18 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 				const mode = collection.modes.find(obj => obj.name === update.modeName)
 				modeID = mode ? mode.modeID : collection.addMode(update.modeName)
 			}
+			if (!("id" in variable)) throw new Error("Why wasn't this case caught by earlier code?")
 
 			// Then, we just need to update its value for this mode.
+
 			if (targetVariable) {
-				variable.setValueForMode(modeID, createVariableBinding(targetVariable))
+				// This variable is an alias token.
+				if (!("id" in targetVariable))
+				{
+					// ...and it's referencing a variable in a different file, so we need to import that target before we can reference it.
+					targetVariable = await figma.variables.importVariableByKeyAsync(targetVariable.key)
+				}
+				variable.setValueForMode(modeID, createVariableBinding(targetVariable as Variable))
 			} else {
 				const value = update.token.$value
 				switch (update.token.$type) {
