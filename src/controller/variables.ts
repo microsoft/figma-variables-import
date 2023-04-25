@@ -26,14 +26,6 @@ function tokenTypeToFigmaType($type: JsonTokenType): VariableResolvedDataType | 
 	}
 }
 
-/** Returns true if a variable or variable collection is in a remote library, whether or not it's been brought local. */
-// function isInLibrary(varOrCollection: Variable | LibraryVariable): varOrCollection is LibraryVariable
-// function isInLibrary(varOrCollection: VariableCollection | LibraryVariableCollection): varOrCollection is LibraryVariableCollection
-// function isInLibrary(varOrCollection: Variable | LibraryVariable | VariableCollection | LibraryVariableCollection): boolean
-// {
-// 	return !("id" in varOrCollection)
-// }
-
 interface QueuedUpdate {
 	figmaName: string
 	token: JsonToken
