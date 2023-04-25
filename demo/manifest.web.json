@@ -1,0 +1,11 @@
+{
+	"name": "Web",
+	"collections": {
+		"Web alias": {
+			"modes": {
+				"Light": [ "light.json" ],
+				"Dark": [ "dark.json" ]
+			}
+		}
+	}
+}
