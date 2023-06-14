@@ -30,7 +30,7 @@ interface QueuedUpdate {
 
 export async function importTokens(files: Record<string, JsonTokenDocument>, manifest?: JsonManifest): Promise<OperationResult[]> {
 	if (!figma.variables) {
-		return [{ result: "error", text: `Failed to create any variables because you‘re not in the required Figma beta.` }]
+		return [{ result: "error", text: `Failed to create any variables because the feature isn't enabled. Try updating the app?` }]
 	}
 
 	const results: OperationResult[] = []

@@ -1,5 +1,4 @@
 {
-	"$schema": "data:application/json,{\"type\": \"object\"}",
 	"Global": {
 		"Color": {
 			"Red": {

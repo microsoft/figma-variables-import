@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { JsonFile, OperationResult, PluginContext } from "shared/collab"
-import { OutlineButton } from "./Button"
+import { type JsonFile, type OperationResult, PluginContext } from "shared/collab"
 import { Disclosure } from "./Disclosure"
 import { FileDropZone } from "./FileDropZone"
 import { Import } from "./Icons"
