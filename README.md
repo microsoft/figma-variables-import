@@ -1,4 +1,4 @@
-# Figma Variables Import plugin
+# Variables Import
 
 This Figma plugin allows you to import design tokens in the [Design Token Community Group](https://design-tokens.github.io/community-group/format/) format as Figma Variables.
 

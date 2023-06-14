@@ -9,7 +9,7 @@ export function Footer() {
 			<div>
 				© 2023 Microsoft
 				{" • "}
-				<StyledLink href="mailto:travis@microsoft.com?subject=Figma Variables Import feedback" target="_blank">
+				<StyledLink href="mailto:travis@microsoft.com?subject=Variables Import feedback" target="_blank">
 					Feedback
 				</StyledLink>
 				{" • "}
