@@ -1,8 +1,8 @@
 # Figma Variables Import plugin
 
-This plugin for the beta version of Figma allows you to import design tokens in the [Design Token Community Group](https://design-tokens.github.io/community-group/format/) format as Figma Variables.
+This Figma plugin allows you to import design tokens in the [Design Token Community Group](https://design-tokens.github.io/community-group/format/) format as Figma Variables.
 
-It's a work in progress, and is not a supported product—just a little internal tool that we use.
+This plugin does not contain a spec-compliant parser for the DTCG format and cannot handle every single valid DTCG file—it's just a tool we built for internal use.. Only `color` and `dimension` tokens are supported right now.
 
 ## Setup
 

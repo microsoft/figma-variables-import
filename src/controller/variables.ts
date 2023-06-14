@@ -4,11 +4,6 @@ import { type JsonToken, type JsonTokenDocument, type JsonManifest, allTokenNode
 import type { JsonTokenType } from "utils/tokens/types"
 import { getAliasTargetName } from "utils/tokens/utils"
 
-/** Delete me and replace me with figma.variables.createVariableBinding once that exists */
-function createVariableBinding(variable: Variable): BoundVariableDescriptor {
-	return { type: "VARIABLE_ID", id: variable.id }
-}
-
 /** For a given token name in the DTCG format, return a valid token name in the Figma format. */
 function tokenNameToFigmaName(name: string): string {
 	return name.replaceAll(".", "/")
@@ -62,7 +57,6 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 
 	{
 		// Remote / team library variables
-		// NOTE: As of writing this code, PluginAPI.teamLibrary was not present in the typings, so I changed them manually.
 		const remoteCollectionsArray = await figma.teamLibrary.getAvailableLibraryVariableCollectionsAsync()
 		for (const collection of remoteCollectionsArray)
 		{
@@ -139,15 +133,15 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 			// If the variable doesn't exist yet, create it now.
 			let collection: VariableCollection | LibraryVariableCollection
 			let variable: Variable | LibraryVariable | undefined = variables[update.figmaName]
-			let modeID: string | undefined = undefined
+			let modeId: string | undefined = undefined
 			if (!variable) {
 				// This variable doesn't exist yet. First, create its collection and mode if necessary.
 				collection = collections[update.collectionName]
 				if (!collection) {
 					collection = figma.variables.createVariableCollection(update.collectionName)
 					collections[update.collectionName] = collection
-					modeID = collection.modes[0].modeID
-					collection.renameMode(modeID, update.modeName)
+					modeId = collection.modes[0].modeId
+					collection.renameMode(modeId, update.modeName)
 				}
 				else if (!("id" in collection))
 				{
@@ -168,9 +162,9 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 				otherUpdatesCount++
 				collection = figma.variables.getVariableCollectionById(variable.variableCollectionId)!
 			}
-			if (!modeID) {
+			if (!modeId) {
 				const mode = collection.modes.find(obj => obj.name === update.modeName)
-				modeID = mode ? mode.modeID : collection.addMode(update.modeName)
+				modeId = mode ? mode.modeId : collection.addMode(update.modeName)
 			}
 			if (!("id" in variable)) throw new Error("Why wasn't this case caught by earlier code?")
 
@@ -183,19 +177,19 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 					// ...and it's referencing a variable in a different file, so we need to import that target before we can reference it.
 					targetVariable = await figma.variables.importVariableByKeyAsync(targetVariable.key)
 				}
-				variable.setValueForMode(modeID, createVariableBinding(targetVariable as Variable))
+				variable.setValueForMode(modeId, figma.variables.createVariableAlias(targetVariable as Variable))
 			} else {
 				const value = update.token.$value
 				switch (update.token.$type) {
 					case "color": {
 						const color = jsonColorToFigmaColor(value)
-						if (color) variable.setValueForMode(modeID, color)
+						if (color) variable.setValueForMode(modeId, color)
 						else results.push({ result: "error", text: `Invalid color: ${update.figmaName} = ${JSON.stringify(value)}` })
 						break
 					}
 					case "dimension": {
 						const float = parseFloat(value)
-						if (!isNaN(float)) variable.setValueForMode(modeID, float)
+						if (!isNaN(float)) variable.setValueForMode(modeId, float)
 						else results.push({ result: "error", text: `Invalid dimension: ${update.figmaName} = ${JSON.stringify(value)}` })
 						break
 					}
