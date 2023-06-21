@@ -1,8 +1,7 @@
 {
 	"name": "Variables Import",
-	"id": "1170488269625782824",
+	"id": "1253424530216967528",
 	"api": "1.0.0",
-	"enableProposedApi": true,
 	"permissions": ["teamlibrary"],
 	"main": "build/controller.js",
 	"ui": "build/ui.html",
