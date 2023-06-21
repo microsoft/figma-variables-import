@@ -13,6 +13,10 @@ export function Footer() {
 					Feedback
 				</StyledLink>
 				{" • "}
+				<StyledLink href="https://github.com/microsoft/figma-variables-import" target="_blank">
+					GitHub
+				</StyledLink>
+				{" • "}
 				<StyledLink href="https://go.microsoft.com/fwlink/?linkid=521839" target="_blank">
 					Privacy
 				</StyledLink>
