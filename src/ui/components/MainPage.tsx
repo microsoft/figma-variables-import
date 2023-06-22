@@ -119,6 +119,7 @@ const NarrowTabsPre = styled.pre`
 
 const ResultsList = styled.ul`
 	padding: 0;
+	user-select: text;
 `
 
 const Result = styled.li`
@@ -127,6 +128,8 @@ const Result = styled.li`
 	grid-template-columns: 2em 1fr;
 `
 
-const ResultIcon = styled.div``
+const ResultIcon = styled.div`
+	user-select: none;
+`
 
 const ResultText = styled.div``
