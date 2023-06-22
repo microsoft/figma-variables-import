@@ -46,7 +46,7 @@ export function MainPage() {
 }`}</code>
 					</NarrowTabsPre>
 				</Disclosure>
-				<p>The files never leave your computer. This plugin's token parser is not fully spec-compliant and not all types of tokens are supported.</p>
+				<p>The files never leave your computer.</p>
 			</Content>
 			<Content>
 				<FileDropZone accept="application/json" onFileChosen={onFileChosen}>

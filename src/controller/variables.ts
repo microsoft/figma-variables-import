@@ -35,11 +35,11 @@ interface QueuedUpdate {
 }
 
 export async function importTokens(files: Record<string, JsonTokenDocument>, manifest?: JsonManifest): Promise<OperationResult[]> {
-	if (!figma.variables || !figma.teamLibrary) {
+	if (!figma.variables) {
 		return [
 			{
 				result: "error",
-				text: `It looks like some of the Variables features aren‘t enabled for you yet in Figma, and this plugin can‘t work properly without them. 😢 I‘m sure you'll get them soon! Just try again later.`,
+				text: `Update and restart Figma to enable Variables features!`,
 			},
 		]
 	}
@@ -68,7 +68,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 
 	{
 		// Remote / team library variables
-		const remoteCollectionsArray = await figma.teamLibrary.getAvailableLibraryVariableCollectionsAsync()
+		const remoteCollectionsArray = figma.teamLibrary ? await figma.teamLibrary.getAvailableLibraryVariableCollectionsAsync() : []
 		for (const collection of remoteCollectionsArray) {
 			collections[collection.name] = collection
 			const variablesArray = await figma.teamLibrary.getVariablesInLibraryCollectionAsync(collection.key)
@@ -235,13 +235,22 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 	} while (keepGoing && queuedUpdates.length)
 
 	// Now, if queuedUpdates isn't empty, it's just a list of unresolved aliases, so report those as errors.
-	for (const missing of queuedUpdates) {
-		results.push({
-			result: "error",
-			text: `Unable to add ${missing.figmaName} mode ${missing.modeName} because it is an alias of ${tokenNameToFigmaName(
-				getAliasTargetName(missing.token.$value) || "another token"
-			)} but that doesn‘t exist.`,
-		})
+	if (queuedUpdates.length) {
+		const isTeamLibraryAvailable = !!figma.teamLibrary
+		if (!isTeamLibraryAvailable) {
+			results.push({
+				result: "error",
+				text: "The Figma community version of this plugin cannot create variables that alias variables in other files during this phase of the Figma beta. (You can build this plugin from the source code to get all features.) With that in mind:",
+			})
+		}
+		for (const missing of queuedUpdates) {
+			results.push({
+				result: "error",
+				text: `Unable to add ${missing.figmaName} mode ${missing.modeName} because it is an alias of ${tokenNameToFigmaName(
+					getAliasTargetName(missing.token.$value) || "another token"
+				)} but ${isTeamLibraryAvailable ? "that doesn‘t exist" : "it wasn‘t found—it may be in a different file"}.`,
+			})
+		}
 	}
 
 	if ((variablesCreated || otherUpdatesCount) && results.length)

@@ -11,6 +11,9 @@ The following token types are supported:
 -   `boolean`
 -   `string`
 -   Aliases to any other supported token in the same JSON and Figma file
+
+The following are supported **only** when running a local copy of this plugin, not from the Figma Community:
+
 -   Aliases to any other supported token in a different JSON file and Figma file, if the other Figma file has published the variables to a team library
 
 ## Setup
@@ -33,6 +36,14 @@ Then you can build.
 
 #### Dev
 
+To enable all features, you need to open `manifest.json` and add the following line:
+
+```json
+"enableProposedApi": true
+```
+
+Then, you can start a background build with:
+
 ```bash
 npm run build:watch
 ```
@@ -42,6 +53,12 @@ npm run build:watch
 ```bash
 npm run build
 ```
+
+`enableProposedApi` **cannot** be used in a plugin published to the Figma community, even internal to your own organization.
+
+### Adding to Figma
+
+Add this plugin to Figma using "[import new plugin from manifest](https://help.figma.com/hc/en-us/articles/360042786733-Create-a-plugin-for-development)".
 
 ---
 
