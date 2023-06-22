@@ -39,7 +39,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 		return [
 			{
 				result: "error",
-				text: `It looks like some of the Variables features aren't fully enabled for you yet in Figma. 😢 Try again later.`,
+				text: `It looks like some of the Variables features aren‘t fully enabled for you yet in Figma. 😢 Try again later.`,
 			},
 		]
 	}
