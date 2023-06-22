@@ -2,7 +2,16 @@
 
 This Figma plugin allows you to import design tokens in the [Design Token Community Group](https://design-tokens.github.io/community-group/format/) format as Figma Variables.
 
-This plugin does not contain a spec-compliant parser for the DTCG format and cannot handle every single valid DTCG file—it's just a tool we built for internal use. Only `color` and `dimension` tokens are supported right now (including aliases).
+This plugin does not contain a fully spec-compliant parser for the DTCG format and cannot handle every single valid token file—it's just a tool we built for internal use.
+
+The following token types are supported:
+
+-   `string`
+-   `number`, `dimension`, `duration`
+-   `boolean`
+-   `string`
+-   Aliases to any other supported token in the same JSON and Figma file
+-   Aliases to any other supported token in a different JSON file and Figma file, if the other Figma file has published the variables to a team library
 
 ## Setup
 

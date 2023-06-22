@@ -15,7 +15,13 @@ function tokenTypeToFigmaType($type: JsonTokenType): VariableResolvedDataType | 
 		case "color":
 			return "COLOR"
 		case "dimension":
+		case "duration":
+		case "number":
 			return "FLOAT"
+		case "boolean":
+			return "BOOLEAN"
+		case "string":
+			return "STRING"
 		default:
 			return null
 	}
@@ -29,8 +35,13 @@ interface QueuedUpdate {
 }
 
 export async function importTokens(files: Record<string, JsonTokenDocument>, manifest?: JsonManifest): Promise<OperationResult[]> {
-	if (!figma.variables) {
-		return [{ result: "error", text: `Failed to create any variables because the feature isn't enabled. Try updating the app?` }]
+	if (!figma.variables || !figma.teamLibrary) {
+		return [
+			{
+				result: "error",
+				text: `It looks like some of the Variables features aren't fully enabled for you yet in Figma. 😢 Try again later.`,
+			},
+		]
 	}
 
 	const results: OperationResult[] = []
@@ -58,8 +69,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 	{
 		// Remote / team library variables
 		const remoteCollectionsArray = await figma.teamLibrary.getAvailableLibraryVariableCollectionsAsync()
-		for (const collection of remoteCollectionsArray)
-		{
+		for (const collection of remoteCollectionsArray) {
 			collections[collection.name] = collection
 			const variablesArray = await figma.teamLibrary.getVariablesInLibraryCollectionAsync(collection.key)
 			for (const variable of variablesArray) variables[variable.name] = variable
@@ -142,11 +152,12 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 					collections[update.collectionName] = collection
 					modeId = collection.modes[0].modeId
 					collection.renameMode(modeId, update.modeName)
-				}
-				else if (!("id" in collection))
-				{
+				} else if (!("id" in collection)) {
 					// The variable doesn't exist, but it's in a remote collection that does.
-					results.push({ result: "error", text: `Failed to create ${update.figmaName} because it‘s defined in a different library.` })
+					results.push({
+						result: "error",
+						text: `Failed to create ${update.figmaName} because it‘s defined in a different library.`,
+					})
 					continue
 				}
 
@@ -154,8 +165,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 				variable = figma.variables.createVariable(update.figmaName, collection.id, figmaType)
 				variables[update.figmaName] = variable
 				variablesCreated++
-			} else if (!("id" in variable))
-			{
+			} else if (!("id" in variable)) {
 				results.push({ result: "error", text: `Failed to update ${update.figmaName} because it‘s defined in a different library.` })
 				continue
 			} else {
@@ -172,8 +182,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 
 			if (targetVariable) {
 				// This variable is an alias token.
-				if (!("id" in targetVariable))
-				{
+				if (!("id" in targetVariable)) {
 					// ...and it's referencing a variable in a different file, so we need to import that target before we can reference it.
 					targetVariable = await figma.variables.importVariableByKeyAsync(targetVariable.key)
 				}
@@ -187,17 +196,36 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						else results.push({ result: "error", text: `Invalid color: ${update.figmaName} = ${JSON.stringify(value)}` })
 						break
 					}
-					case "dimension": {
-						const float = parseFloat(value)
+					case "dimension":
+					case "duration":
+					case "number": {
+						const float = typeof value === "number" ? value : parseFloat(value)
 						if (!isNaN(float)) variable.setValueForMode(modeId, float)
-						else results.push({ result: "error", text: `Invalid dimension: ${update.figmaName} = ${JSON.stringify(value)}` })
+						else
+							results.push({
+								result: "error",
+								text: `Invalid ${update.token.$type}: ${update.figmaName} = ${JSON.stringify(value)}`,
+							})
 						break
 					}
+					case "boolean":
+						if (typeof value === "boolean") variable.setValueForMode(modeId, value)
+						else
+							results.push({
+								result: "error",
+								text: `Invalid ${update.token.$type}: ${update.figmaName} = ${JSON.stringify(value)}`,
+							})
+						break
+					case "string":
+						variable.setValueForMode(modeId, value)
+						break
 					default:
 						throw new Error(
 							`Failed to update a variable of type ${update.token.$type}. tokenTypeToFigmaType probably needs to be updated.`
 						)
 				}
+
+				variable.description = update.token.$description || ""
 			}
 
 			// Any time we successfully make any updates, we need to loop again unless we completely finish.

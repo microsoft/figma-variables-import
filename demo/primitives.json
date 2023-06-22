@@ -1,0 +1,15 @@
+{
+	"Lorem ipsum": {
+		"$type": "string",
+		"$value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet consectetur adipiscing elit duis tristique. Etiam erat velit scelerisque in dictum non consectetur a. Vel orci porta non pulvinar neque laoreet suspendisse interdum. Blandit cursus risus at ultrices mi. Egestas diam in arcu cursus euismod quis viverra nibh cras. Urna condimentum mattis pellentesque id nibh. Felis imperdiet proin fermentum leo vel orci porta non. Id interdum velit laoreet id donec. Gravida rutrum quisque non tellus orci ac. Orci porta non pulvinar neque laoreet suspendisse. Nibh sit amet commodo nulla. Varius sit amet mattis vulputate enim. Tristique magna sit amet purus. Eget mi proin sed libero enim sed. Consequat nisl vel pretium lectus. Enim eu turpis egestas pretium."
+	},
+	"Five": {
+		"$type": "number",
+		"$value": 5,
+		"$description": "Number five is alive"
+	},
+	"Figma is neat": {
+		"$type": "boolean",
+		"$value": true
+	}
+}

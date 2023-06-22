@@ -1,6 +1,6 @@
 {
 	"name": "figma-variables-import",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Variables Import",
 	"homepage": "https://www.figma.com/community/plugin/1253424530216967528",
 	"author": "Travis Spomer <travis@microsoft.com>",
