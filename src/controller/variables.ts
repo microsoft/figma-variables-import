@@ -174,7 +174,15 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 			}
 			if (!modeId) {
 				const mode = collection.modes.find(obj => obj.name === update.modeName)
-				modeId = mode ? mode.modeId : collection.addMode(update.modeName)
+				try {
+					modeId = mode ? mode.modeId : collection.addMode(update.modeName)
+				} catch (ex) {
+					results.push({
+						result: "error",
+						text: `Failed to add a variable mode for ${update.modeName}. You may be at the limit of what your Figma account currently allows. (You already have ${collection.modes.length}.) 💸`,
+					})
+					break
+				}
 			}
 			if (!("id" in variable)) throw new Error("Why wasn't this case caught by earlier code?")
 
