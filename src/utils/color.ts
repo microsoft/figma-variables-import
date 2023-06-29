@@ -13,9 +13,9 @@ function hex2ToFloat(hex2: string): number {
 	return parseInt(hex2, 16) / 0xff
 }
 
-/** Converts a 2-character hex string 00-FF to a number 0.000-1.000 with three digits of precision after the decimal point. */
-function hex2ToFloat3(hex2: string): number {
-	return Math.round(parseInt(hex2, 16) * (1000 / 0xff)) / 1000
+/** Converts a 2-character hex string 00-FF to a number 0.00-1.00 with two digits of precision after the decimal point. */
+function hex2ToFloat2(hex2: string): number {
+	return Math.round(parseInt(hex2, 16) * (100 / 0xff)) / 100
 }
 
 /**
@@ -32,7 +32,7 @@ export function jsonColorToFigmaColor(hex: string): RGB | RGBA | null {
 			r: hex2ToFloat(hex.slice(1, 3)),
 			g: hex2ToFloat(hex.slice(3, 5)),
 			b: hex2ToFloat(hex.slice(5, 7)),
-			a: hex2ToFloat3(hex.slice(7, 9)),
+			a: hex2ToFloat2(hex.slice(7, 9)),
 		}
 		if (isNaN(color.r) || isNaN(color.g) || isNaN(color.b) || isNaN(color.a)) return null
 		return color
@@ -57,7 +57,7 @@ export function jsonColorToFigmaColor(hex: string): RGB | RGBA | null {
 */
 export function jsonColorToFigmaColorAndOpacity(hex: string): [color: RGB, opacity: number] | null {
 	if (hex.startsWith("#") && (hex.length === 7 || hex.length === 9)) {
-		const a = hex.length === 9 ? hex2ToFloat3(hex.slice(7, 9)) : 1
+		const a = hex.length === 9 ? hex2ToFloat2(hex.slice(7, 9)) : 1
 		if (isNaN(a)) return null
 		const color = {
 			r: hex2ToFloat(hex.slice(1, 3)),
