@@ -232,8 +232,14 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 							`Failed to update a variable of type ${update.token.$type}. tokenTypeToFigmaType probably needs to be updated.`
 						)
 				}
+			}
 
-				variable.description = update.token.$description || ""
+			variable.description = update.token.$description || variable.description || ""
+
+			if (update.token.$extensions && update.token.$extensions["com.figma"] && update.token.$extensions["com.figma"].scopes) {
+				variable.scopes = update.token.$extensions["com.figma"].scopes
+			} else {
+				variable.scopes = variable.scopes || ["ALL_SCOPES"]
 			}
 
 			// Any time we successfully make any updates, we need to loop again unless we completely finish.
