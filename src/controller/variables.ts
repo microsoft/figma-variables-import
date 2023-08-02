@@ -236,6 +236,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 
 			variable.description = update.token.$description || variable.description || ""
 
+			// Important: This syntax is a hack specific to this plugin and is not a part of the standard or Figma plans.
 			if (update.token.$extensions && update.token.$extensions["com.figma"] && update.token.$extensions["com.figma"].scopes) {
 				variable.scopes = update.token.$extensions["com.figma"].scopes
 			} else {
