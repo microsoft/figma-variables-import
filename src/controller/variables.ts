@@ -237,10 +237,13 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 			variable.description = update.token.$description || variable.description || ""
 
 			// Important: This syntax is a hack specific to this plugin and is not a part of the standard or Figma plans.
-			if (update.token.$extensions && update.token.$extensions["com.figma"] && update.token.$extensions["com.figma"].scopes) {
-				variable.scopes = update.token.$extensions["com.figma"].scopes
-			} else {
-				variable.scopes = variable.scopes || ["ALL_SCOPES"]
+			// Also, the scopes property is not available for strings and booleans.
+			if (variable.resolvedType === "COLOR" || variable.resolvedType === "FLOAT") {
+				if (update.token.$extensions && update.token.$extensions["com.figma"] && update.token.$extensions["com.figma"].scopes) {
+					variable.scopes = update.token.$extensions["com.figma"].scopes
+				} else {
+					variable.scopes = variable.scopes || ["ALL_SCOPES"]
+				}
 			}
 
 			// Any time we successfully make any updates, we need to loop again unless we completely finish.
