@@ -19,7 +19,7 @@ export function MainPage() {
 				<ul>
 					<li>
 						JSON files in the{" "}
-						<a href="https://design-tokens.github.io/community-group/format/" target="_blank">
+						<a href="https://design-tokens.github.io/community-group/format/" target="_blank" rel="noopener noreferrer">
 							Design Tokens Community Group format
 						</a>
 					</li>
@@ -49,20 +49,29 @@ export function MainPage() {
 				<p>The files never leave your computer.</p>
 			</Content>
 			<Content>
-				<FileDropZone accept="application/json" onFileChosen={onFileChosen}>
+				<FileDropZone 
+					accept="application/json" 
+					onFileChosen={onFileChosen}
+					aria-label="Drop JSON files here to import tokens"
+					aria-describedby="drop-zone-help"
+				>
 					<Horizontal>
-						<Import />
-						<div>Mmmm, files. Yummy.</div>
+						<Import aria-hidden="true" />
+						<div id="drop-zone-help">Drop files here or click to browse</div>
 					</Horizontal>
 				</FileDropZone>
 			</Content>
 			<Content>
-				{results.length > 0 && <h2>Results</h2>}
-				<ResultsList>
+				{results.length > 0 && <h2 id="results-heading">Results</h2>}
+				<ResultsList role="list" aria-labelledby={results.length > 0 ? "results-heading" : undefined}>
 					{results.map((result, i) => (
-						<Result key={i}>
-							<ResultIcon>{result.result === "error" ? "❌" : ""}</ResultIcon>
-							<ResultText>{result.text}</ResultText>
+						<Result key={i} role="listitem">
+							<ResultIcon aria-hidden="true">{result.result === "error" ? "❌" : "✓"}</ResultIcon>
+							<ResultText>
+								{result.result === "error" && <ScreenReaderOnly>Error: </ScreenReaderOnly>}
+								{result.result === "success" && <ScreenReaderOnly>Success: </ScreenReaderOnly>}
+								{result.text}
+							</ResultText>
 						</Result>
 					))}
 				</ResultsList>
@@ -75,7 +84,16 @@ export function MainPage() {
 		const newResults: OperationResult[] = []
 
 		try {
-			setResults([{ result: "info", text: "Thinking..." }])
+			setResults([{ result: "info", text: "Processing files..." }])
+			
+			// Announce to screen readers
+			const announcement = document.createElement("div")
+			announcement.setAttribute("role", "status")
+			announcement.setAttribute("aria-live", "polite")
+			announcement.className = "sr-only"
+			announcement.textContent = "Processing files, please wait."
+			document.body.appendChild(announcement)
+			setTimeout(() => document.body.removeChild(announcement), 1000)
 
 			for (const file of files) {
 				try {
@@ -133,3 +151,15 @@ const ResultIcon = styled.div`
 `
 
 const ResultText = styled.div``
+
+const ScreenReaderOnly = styled.span`
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+`

@@ -11,9 +11,9 @@ export interface PluginLayoutProps {
 export function PluginLayout(props: PluginLayoutProps) {
 	return (
 		<Root>
-			<Header>{props.header}</Header>
-			<Body>{props.children}</Body>
-			<Footer>{props.footer}</Footer>
+			{props.header && <Header role="banner" aria-label="Plugin header">{props.header}</Header>}
+			<Body role="main" aria-label="Plugin content">{props.children}</Body>
+			{props.footer && <Footer role="contentinfo" aria-label="Plugin footer">{props.footer}</Footer>}
 		</Root>
 	)
 }
@@ -25,7 +25,7 @@ const Root = styled.div`
 	grid-template-rows: auto 1fr auto;
 `
 
-const Body = styled.section`
+const Body = styled.main`
 	display: flex;
 	flex-direction: column;
 	overflow: hidden auto;
