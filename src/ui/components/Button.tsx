@@ -1,8 +1,12 @@
 import styled, { css } from "styled-components"
 
 export const ButtonBaseStyles = css`
-	height: 32px;
-	line-height: 30px;
+	// WCAG 2.2 AA requires minimum 44px touch target
+	min-height: 44px;
+	height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	max-width: 200px;
 	padding: 0 11px;
 
@@ -10,12 +14,24 @@ export const ButtonBaseStyles = css`
 	border-radius: 6px;
 	border: 1px solid var(--figma-color-border-strong, #2c2c2c);
 
-	color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+	color: var(--figma-color-text, #0d0d0d); // Solid color for better contrast
 	font: inherit;
 	text-align: center;
 
-	cursor: default;
+	cursor: pointer;
+	
+	&:hover {
+		opacity: 0.9;
+	}
+	
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 	user-select: none;
+	
+	// Smooth transitions for better UX
+	transition: opacity 0.2s ease, border-color 0.2s ease;
 `
 
 export const OutlineButton = styled.button`

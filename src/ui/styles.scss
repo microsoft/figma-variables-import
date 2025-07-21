@@ -11,7 +11,8 @@ body,
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	user-select: none;
+	// Allow text selection for better accessibility
+	// Only disable selection on specific UI elements
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 	font-size: 11px;
 	line-height: (16px / 11px);
 	background-color: var(--figma-color-bg, #ffffff);
-	color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+	color: var(--figma-color-text, #0d0d0d); // Solid color for better contrast
 }
 
 h1 {
@@ -60,8 +61,18 @@ strong {
 	font-weight: 600;
 }
 
-*:focus {
-	outline: none;
+// Visible focus indicators for accessibility
+*:focus-visible {
+	outline: 2px solid var(--figma-color-text-brand, #007be5);
+	outline-offset: 2px;
+}
+
+// For browsers that don't support :focus-visible
+@supports not selector(:focus-visible) {
+	*:focus {
+		outline: 2px solid var(--figma-color-text-brand, #007be5);
+		outline-offset: 2px;
+	}
 }
 
 img,
