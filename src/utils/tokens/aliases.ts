@@ -21,7 +21,7 @@ export function resolveAllAliases(tokens: Record<string, JsonToken>): OperationR
 			currentResults.push({ result: "error", text: `A token was an alias of "${name}" but that token doesn‘t exist.` })
 			return
 		}
-		const value = token.$value
+		const value = token.value || token.$value
 		if (!token) {
 			currentResults.push({ result: "error", text: `A token was an alias of "${name}" but that doesn‘t have a value.` })
 			return

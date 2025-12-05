@@ -34,7 +34,7 @@
 		"css-loader": "^6.7.1",
 		"eslint": "^8.20.0",
 		"html-webpack-plugin": "^5.5.0",
-		"node-sass": "^8.0.0",
+		"sass": "^1.57.1",
 		"prettier": "^2.7.1",
 		"sass-loader": "^13.2.0",
 		"style-loader": "^3.3.1",

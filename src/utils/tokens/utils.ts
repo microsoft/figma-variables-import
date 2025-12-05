@@ -5,11 +5,11 @@ export function isChildName(name: string): boolean {
 }
 
 export function isToken(obj: JsonTokenGroup | JsonToken): obj is JsonToken {
-	return typeof obj === "object" && "$value" in obj
+	return typeof obj === "object" && ("value" in obj || "$value" in obj)
 }
 
 export function isTokenGroup(obj: JsonTokenGroup | JsonToken): obj is JsonTokenGroup {
-	return typeof obj === "object" && !("$value" in obj)
+	return typeof obj === "object" && !("value" in obj) && !("$value" in obj)
 }
 
 export function isAliasValue(value: string): boolean {

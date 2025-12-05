@@ -9,9 +9,9 @@ function tokenNameToFigmaName(name: string): string {
 	return name.replaceAll(".", "/")
 }
 
-/** For a given token $type in the DTCG format, return the corresponding Figma token type, or null if there isn't one. */
-function tokenTypeToFigmaType($type: JsonTokenType): VariableResolvedDataType | null {
-	switch ($type) {
+/** For a given token "$type" or "type" in the DTCG format, return the corresponding Figma token type, or null if there isn't one. */
+function tokenTypeToFigmaType(type: JsonTokenType): VariableResolvedDataType | null {
+	switch (type) {
 		case "color":
 			return "COLOR"
 		case "dimension":
@@ -114,17 +114,18 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 		keepGoing = false
 		const retryNextTime: typeof queuedUpdates = []
 		for (const update of queuedUpdates) {
-			const figmaType = tokenTypeToFigmaType(update.token.$type)
+			const tokenType = update.token.type || update.token.$type
+			const figmaType = tokenType ? tokenTypeToFigmaType(tokenType) : null
 			if (!figmaType) {
 				results.push({
 					result: "info",
-					text: `Unable to add ${update.figmaName} mode ${update.modeName} because ${update.token.$type} tokens aren‘t supported.`,
+					text: `Unable to add ${update.figmaName} mode ${update.modeName} because ${tokenType || "unknown"} tokens aren't supported.`,
 				})
 				continue
 			}
 
 			// First, if this is an alias, see if the target exists already.
-			const targetName = getAliasTargetName(update.token.$value)
+			const targetName = getAliasTargetName(update.token.value || update.token.$value)
 			let targetVariable: Variable | LibraryVariable | undefined = undefined
 			if (targetName) {
 				const targetFigmaName = tokenNameToFigmaName(targetName)
@@ -196,8 +197,9 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 				}
 				variable.setValueForMode(modeId, figma.variables.createVariableAlias(targetVariable as Variable))
 			} else {
-				const value = update.token.$value
-				switch (update.token.$type) {
+				const value = update.token.value || update.token.$value
+				const tokenType = update.token.type || update.token.$type
+				switch (tokenType) {
 					case "color": {
 						const color = jsonColorToFigmaColor(value)
 						if (color) variable.setValueForMode(modeId, color)
@@ -212,7 +214,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						else
 							results.push({
 								result: "error",
-								text: `Invalid ${update.token.$type}: ${update.figmaName} = ${JSON.stringify(value)}`,
+								text: `Invalid ${update.token.type}: ${update.figmaName} = ${JSON.stringify(value)}`,
 							})
 						break
 					}
@@ -221,7 +223,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						else
 							results.push({
 								result: "error",
-								text: `Invalid ${update.token.$type}: ${update.figmaName} = ${JSON.stringify(value)}`,
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
 							})
 						break
 					case "string":
@@ -229,7 +231,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						break
 					default:
 						throw new Error(
-							`Failed to update a variable of type ${update.token.$type}. tokenTypeToFigmaType probably needs to be updated.`
+							`Failed to update a variable of type ${tokenType}. tokenTypeToFigmaType probably needs to be updated.`
 						)
 				}
 			}
@@ -265,8 +267,8 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 			results.push({
 				result: "error",
 				text: `Unable to add ${missing.figmaName} mode ${missing.modeName} because it is an alias of ${tokenNameToFigmaName(
-					getAliasTargetName(missing.token.$value) || "another token"
-				)} but ${isTeamLibraryAvailable ? "that doesn‘t exist" : "it wasn‘t found—it may be in a different file"}.`,
+					getAliasTargetName(missing.token.value || missing.token.$value) || "another token"
+				)} but ${isTeamLibraryAvailable ? "that doesn't exist" : "it wasn't found—it may be in a different file"}.`,
 			})
 		}
 	}
