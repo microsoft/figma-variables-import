@@ -31,6 +31,6 @@ export interface JsonToken {
 }
 
 type JsonTokenPrimitiveType = "string" | "number" | "boolean" | "object" | "array" | "null"
-type JsonTokenBasicType = "color" | "dimension" | "fontFamily" | "fontWeight" | "duration" | "cubicBezier"
+type JsonTokenBasicType = "color" | "dimension" | "fontFamily" | "fontWeight" | "duration" | "cubicBezier" | "fontSize" | "borderRadius" | "lineHeight" | "letterSpacing"
 type JsonTokenCompositeType = "strokeStyle" | "border" | "transition" | "shadow" | "gradient" | "typography"
 export type JsonTokenType = JsonTokenPrimitiveType | JsonTokenBasicType | JsonTokenCompositeType

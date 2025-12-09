@@ -1,5 +1,8 @@
 import type { OperationResult } from "shared/collab"
 import { jsonColorToFigmaColor } from "utils/color"
+import { extractFirstFontFamily } from "utils/fontFamily"
+import { mapFontWeight } from "utils/lineWeight"
+import { convertLineHeightPercentageToMultiplier } from "utils/lineHeight"
 import { type JsonToken, type JsonTokenDocument, type JsonManifest, allTokenNodes } from "utils/tokens"
 import type { JsonTokenType } from "utils/tokens/types"
 import { getAliasTargetName } from "utils/tokens/utils"
@@ -7,6 +10,17 @@ import { getAliasTargetName } from "utils/tokens/utils"
 /** For a given token name in the DTCG format, return a valid token name in the Figma format. */
 function tokenNameToFigmaName(name: string): string {
 	return name.replaceAll(".", "/")
+}
+
+/** Convert rem values to pixels (assuming 16px base font size). */
+function convertRemToPx(value: any): number {
+	if (typeof value === "number") {
+		return value * 16
+	} else if (typeof value === "string") {
+		return parseFloat(value) * 16
+	} else {
+		return parseFloat(value) * 16
+	}
 }
 
 /** For a given token "$type" or "type" in the DTCG format, return the corresponding Figma token type, or null if there isn't one. */
@@ -17,10 +31,16 @@ function tokenTypeToFigmaType(type: JsonTokenType): VariableResolvedDataType | n
 		case "dimension":
 		case "duration":
 		case "number":
+		case "fontSize":
+		case "borderRadius":
+		case "lineHeight":
+		case "letterSpacing":
 			return "FLOAT"
 		case "boolean":
 			return "BOOLEAN"
 		case "string":
+		case "fontFamily":
+		case "fontWeight":
 			return "STRING"
 		default:
 			return null
@@ -206,15 +226,37 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						else results.push({ result: "error", text: `Invalid color: ${update.figmaName} = ${JSON.stringify(value)}` })
 						break
 					}
+					case "fontSize": {
+						const fontSizeFloat = convertRemToPx(value)
+						if (!isNaN(fontSizeFloat)) variable.setValueForMode(modeId, fontSizeFloat)
+						else
+							results.push({
+								result: "error",
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
+							})
+						break
+					}
+					case "lineHeight": {
+						const lineHeightFloat = convertLineHeightPercentageToMultiplier(value)
+						if (!isNaN(lineHeightFloat)) variable.setValueForMode(modeId, lineHeightFloat)
+						else
+							results.push({
+								result: "error",
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
+							})
+						break
+					}
+					case "letterSpacing":
 					case "dimension":
 					case "duration":
-					case "number": {
+					case "number":
+					case "borderRadius": {
 						const float = typeof value === "number" ? value : parseFloat(value)
 						if (!isNaN(float)) variable.setValueForMode(modeId, float)
 						else
 							results.push({
 								result: "error",
-								text: `Invalid ${update.token.type}: ${update.figmaName} = ${JSON.stringify(value)}`,
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
 							})
 						break
 					}
@@ -228,6 +270,12 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						break
 					case "string":
 						variable.setValueForMode(modeId, value)
+						break
+					case "fontFamily":
+						variable.setValueForMode(modeId, extractFirstFontFamily(value))
+						break
+					case "fontWeight":
+						variable.setValueForMode(modeId, mapFontWeight(value))
 						break
 					default:
 						throw new Error(
@@ -287,3 +335,5 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 
 	return results
 }
+
+
