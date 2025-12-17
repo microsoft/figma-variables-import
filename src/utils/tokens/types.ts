@@ -28,6 +28,7 @@ export interface JsonToken {
 	$value?: JsonTokenValue
 	$description?: string
 	$extensions?: Record<string, any>
+	extensions?: Record<string, any>
 }
 
 type JsonTokenPrimitiveType = "string" | "number" | "boolean" | "object" | "array" | "null"

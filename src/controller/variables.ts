@@ -219,6 +219,14 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 			} else {
 				const value = update.token.value || update.token.$value
 				const tokenType = update.token.type || update.token.$type
+
+				//Update code syntax first if specified in $extensions
+				if (update.token.extensions && update.token.extensions["codeSyntax"] && update.token.extensions["codeSyntaxPlatform"] && typeof update.token.extensions["codeSyntax"] === "string") {
+					const codeSyntax = update.token.extensions["codeSyntax"]
+					const platform = update.token.extensions["codeSyntaxPlatform"]
+					variable.setVariableCodeSyntax(platform, codeSyntax);
+				}
+
 				switch (tokenType) {
 					case "color": {
 						const color = jsonColorToFigmaColor(value)
