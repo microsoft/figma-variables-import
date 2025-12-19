@@ -16,8 +16,6 @@ function tokenNameToFigmaName(name: string): string {
 function convertRemToPx(value: any): number {
 	if (typeof value === "number") {
 		return value * 16
-	} else if (typeof value === "string") {
-		return parseFloat(value) * 16
 	} else {
 		return parseFloat(value) * 16
 	}
