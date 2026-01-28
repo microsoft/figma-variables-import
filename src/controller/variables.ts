@@ -2,7 +2,6 @@ import type { OperationResult } from "shared/collab"
 import { jsonColorToFigmaColor } from "utils/color"
 import { extractFirstFontFamily } from "utils/fontFamily"
 import { mapFontWeight } from "utils/lineWeight"
-import { convertLineHeightPercentageToMultiplier } from "utils/lineHeight"
 import { type JsonToken, type JsonTokenDocument, type JsonManifest, allTokenNodes } from "utils/tokens"
 import type { JsonTokenType } from "utils/tokens/types"
 import { getAliasTargetName } from "utils/tokens/utils"
@@ -246,7 +245,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						break
 					}
 					case "lineHeight": {
-						const lineHeightFloat = convertLineHeightPercentageToMultiplier(value)
+						const lineHeightFloat = value
 						if (!isNaN(lineHeightFloat)) variable.setValueForMode(modeId, lineHeightFloat)
 						else
 							results.push({
