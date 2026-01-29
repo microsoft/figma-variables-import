@@ -245,7 +245,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						break
 					}
 					case "lineHeight": {
-						const lineHeightFloat = value
+						const lineHeightFloat = typeof value === "number" ? value : parseFloat(value)
 						if (!isNaN(lineHeightFloat)) variable.setValueForMode(modeId, lineHeightFloat)
 						else
 							results.push({
