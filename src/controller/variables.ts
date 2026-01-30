@@ -1,7 +1,6 @@
 import type { OperationResult } from "shared/collab"
 import { jsonColorToFigmaColor } from "utils/color"
 import { extractFirstFontFamily } from "utils/fontFamily"
-import { mapFontWeight } from "utils/lineWeight"
 import { type JsonToken, type JsonTokenDocument, type JsonManifest, allTokenNodes } from "utils/tokens"
 import type { JsonTokenType } from "utils/tokens/types"
 import { getAliasTargetName } from "utils/tokens/utils"
@@ -283,7 +282,13 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						variable.setValueForMode(modeId, extractFirstFontFamily(value))
 						break
 					case "fontWeight":
-						variable.setValueForMode(modeId, mapFontWeight(value))
+						const fontWeightFloat = parseFloat(value)
+						if (!isNaN(fontWeightFloat)) variable.setValueForMode(modeId, fontWeightFloat)
+						else
+							results.push({
+								result: "error",
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
+							})
 						break
 					default:
 						throw new Error(
