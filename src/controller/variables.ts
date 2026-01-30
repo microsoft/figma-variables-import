@@ -31,6 +31,7 @@ function tokenTypeToFigmaType(type: JsonTokenType): VariableResolvedDataType | n
 		case "borderRadius":
 		case "lineHeight":
 		case "letterSpacing":
+		case "strokeWidth":
 			return "FLOAT"
 		case "boolean":
 			return "BOOLEAN"
@@ -282,13 +283,10 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						variable.setValueForMode(modeId, extractFirstFontFamily(value))
 						break
 					case "fontWeight":
-						const fontWeightFloat = parseFloat(value)
-						if (!isNaN(fontWeightFloat)) variable.setValueForMode(modeId, fontWeightFloat)
-						else
-							results.push({
-								result: "error",
-								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
-							})
+						variable.setValueForMode(modeId, value)
+						break
+					case "strokeWidth":
+						variable.setValueForMode(modeId, parseFloat(value))
 						break
 					default:
 						throw new Error(
