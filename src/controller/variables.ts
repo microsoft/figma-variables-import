@@ -32,6 +32,9 @@ function tokenTypeToFigmaType(type: JsonTokenType): VariableResolvedDataType | n
 		case "lineHeight":
 		case "letterSpacing":
 		case "strokeWidth":
+		case "gap":
+		case "spacing":
+		case "padding":
 			return "FLOAT"
 		case "boolean":
 			return "BOOLEAN"
@@ -258,6 +261,10 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 					case "dimension":
 					case "duration":
 					case "number":
+					case "gap":
+					case "spacing":
+					case "padding":
+					case "strokeWidth":
 					case "borderRadius": {
 						const float = typeof value === "number" ? value : parseFloat(value)
 						if (!isNaN(float)) variable.setValueForMode(modeId, float)
@@ -285,9 +292,7 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 					case "fontWeight":
 						variable.setValueForMode(modeId, value)
 						break
-					case "strokeWidth":
-						variable.setValueForMode(modeId, parseFloat(value))
-						break
+
 					default:
 						throw new Error(
 							`Failed to update a variable of type ${tokenType}. tokenTypeToFigmaType probably needs to be updated.`
