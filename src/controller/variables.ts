@@ -1,5 +1,6 @@
 import type { OperationResult } from "shared/collab"
 import { jsonColorToFigmaColor } from "utils/color"
+import { extractFirstFontFamily } from "utils/fontFamily"
 import { type JsonToken, type JsonTokenDocument, type JsonManifest, allTokenNodes } from "utils/tokens"
 import type { JsonTokenType } from "utils/tokens/types"
 import { getAliasTargetName } from "utils/tokens/utils"
@@ -9,18 +10,37 @@ function tokenNameToFigmaName(name: string): string {
 	return name.replaceAll(".", "/")
 }
 
-/** For a given token $type in the DTCG format, return the corresponding Figma token type, or null if there isn't one. */
-function tokenTypeToFigmaType($type: JsonTokenType): VariableResolvedDataType | null {
-	switch ($type) {
+/** Convert rem values to pixels (assuming 16px base font size). */
+function convertRemToPx(value: any): number {
+	if (typeof value === "number") {
+		return value * 16
+	} else {
+		return parseFloat(value) * 16
+	}
+}
+
+/** For a given token "$type" or "type" in the DTCG format, return the corresponding Figma token type, or null if there isn't one. */
+function tokenTypeToFigmaType(type: JsonTokenType): VariableResolvedDataType | null {
+	switch (type) {
 		case "color":
 			return "COLOR"
 		case "dimension":
 		case "duration":
 		case "number":
+		case "fontSize":
+		case "borderRadius":
+		case "lineHeight":
+		case "letterSpacing":
+		case "strokeWidth":
+		case "gap":
+		case "spacing":
+		case "padding":
 			return "FLOAT"
 		case "boolean":
 			return "BOOLEAN"
 		case "string":
+		case "fontFamily":
+		case "fontWeight":
 			return "STRING"
 		default:
 			return null
@@ -114,17 +134,18 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 		keepGoing = false
 		const retryNextTime: typeof queuedUpdates = []
 		for (const update of queuedUpdates) {
-			const figmaType = tokenTypeToFigmaType(update.token.$type)
+			const tokenType = update.token.type || update.token.$type
+			const figmaType = tokenType ? tokenTypeToFigmaType(tokenType) : null
 			if (!figmaType) {
 				results.push({
 					result: "info",
-					text: `Unable to add ${update.figmaName} mode ${update.modeName} because ${update.token.$type} tokens aren‘t supported.`,
+					text: `Unable to add ${update.figmaName} mode ${update.modeName} because ${tokenType || "unknown"} tokens aren't supported.`,
 				})
 				continue
 			}
 
 			// First, if this is an alias, see if the target exists already.
-			const targetName = getAliasTargetName(update.token.$value)
+			const targetName = getAliasTargetName(update.token.value || update.token.$value)
 			let targetVariable: Variable | LibraryVariable | undefined = undefined
 			if (targetName) {
 				const targetFigmaName = tokenNameToFigmaName(targetName)
@@ -165,6 +186,15 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 				variable = figma.variables.createVariable(update.figmaName, collection.id, figmaType)
 				variables[update.figmaName] = variable
 				variablesCreated++
+				// Set code syntax if specified in extensions (check both formats)
+				const extensions = update.token.extensions || update.token.$extensions
+				if (extensions && extensions["codeSyntax"] && extensions["codeSyntaxPlatform"] && typeof extensions["codeSyntax"] === "string") {
+					const codeSyntax = extensions["codeSyntax"]
+					const platform = extensions["codeSyntaxPlatform"]
+					if ("id" in variable) { //checks variable is of type Variable
+						variable.setVariableCodeSyntax(platform, codeSyntax)
+					}
+				}
 			} else if (!("id" in variable)) {
 				results.push({ result: "error", text: `Failed to update ${update.figmaName} because it‘s defined in a different library.` })
 				continue
@@ -196,23 +226,52 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 				}
 				variable.setValueForMode(modeId, figma.variables.createVariableAlias(targetVariable as Variable))
 			} else {
-				const value = update.token.$value
-				switch (update.token.$type) {
+				const value = update.token.value || update.token.$value
+				const tokenType = update.token.type || update.token.$type
+
+
+				switch (tokenType) {
 					case "color": {
 						const color = jsonColorToFigmaColor(value)
 						if (color) variable.setValueForMode(modeId, color)
 						else results.push({ result: "error", text: `Invalid color: ${update.figmaName} = ${JSON.stringify(value)}` })
 						break
 					}
+					case "fontSize": {
+						const fontSizeFloat = convertRemToPx(value)
+						if (!isNaN(fontSizeFloat)) variable.setValueForMode(modeId, fontSizeFloat)
+						else
+							results.push({
+								result: "error",
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
+							})
+						break
+					}
+					case "lineHeight": {
+						const lineHeightFloat = typeof value === "number" ? value : parseFloat(value)
+						if (!isNaN(lineHeightFloat)) variable.setValueForMode(modeId, lineHeightFloat)
+						else
+							results.push({
+								result: "error",
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
+							})
+						break
+					}
+					case "letterSpacing":
 					case "dimension":
 					case "duration":
-					case "number": {
+					case "number":
+					case "gap":
+					case "spacing":
+					case "padding":
+					case "strokeWidth":
+					case "borderRadius": {
 						const float = typeof value === "number" ? value : parseFloat(value)
 						if (!isNaN(float)) variable.setValueForMode(modeId, float)
 						else
 							results.push({
 								result: "error",
-								text: `Invalid ${update.token.$type}: ${update.figmaName} = ${JSON.stringify(value)}`,
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
 							})
 						break
 					}
@@ -221,15 +280,22 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 						else
 							results.push({
 								result: "error",
-								text: `Invalid ${update.token.$type}: ${update.figmaName} = ${JSON.stringify(value)}`,
+								text: `Invalid ${tokenType}: ${update.figmaName} = ${JSON.stringify(value)}`,
 							})
 						break
 					case "string":
 						variable.setValueForMode(modeId, value)
 						break
+					case "fontFamily":
+						variable.setValueForMode(modeId, extractFirstFontFamily(value))
+						break
+					case "fontWeight":
+						variable.setValueForMode(modeId, value)
+						break
+
 					default:
 						throw new Error(
-							`Failed to update a variable of type ${update.token.$type}. tokenTypeToFigmaType probably needs to be updated.`
+							`Failed to update a variable of type ${tokenType}. tokenTypeToFigmaType probably needs to be updated.`
 						)
 				}
 			}
@@ -265,8 +331,8 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 			results.push({
 				result: "error",
 				text: `Unable to add ${missing.figmaName} mode ${missing.modeName} because it is an alias of ${tokenNameToFigmaName(
-					getAliasTargetName(missing.token.$value) || "another token"
-				)} but ${isTeamLibraryAvailable ? "that doesn‘t exist" : "it wasn‘t found—it may be in a different file"}.`,
+					getAliasTargetName(missing.token.value || missing.token.$value) || "another token"
+				)} but ${isTeamLibraryAvailable ? "that doesn't exist" : "it wasn't found—it may be in a different file"}.`,
 			})
 		}
 	}
@@ -285,3 +351,5 @@ export async function importTokens(files: Record<string, JsonTokenDocument>, man
 
 	return results
 }
+
+

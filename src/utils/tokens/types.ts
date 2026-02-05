@@ -22,13 +22,16 @@ export interface JsonTokenChildren {
 export type JsonTokenValue = any
 
 export interface JsonToken {
-	$type: JsonTokenType
-	$value: JsonTokenValue
+	type?: JsonTokenType
+	$type?: JsonTokenType
+	value?: JsonTokenValue
+	$value?: JsonTokenValue
 	$description?: string
 	$extensions?: Record<string, any>
+	extensions?: Record<string, any>
 }
 
 type JsonTokenPrimitiveType = "string" | "number" | "boolean" | "object" | "array" | "null"
-type JsonTokenBasicType = "color" | "dimension" | "fontFamily" | "fontWeight" | "duration" | "cubicBezier"
+type JsonTokenBasicType = "color" | "dimension" | "fontFamily" | "fontWeight" | "duration" | "cubicBezier" | "fontSize" | "borderRadius" | "lineHeight" | "letterSpacing" | "strokeWidth" | "spacing" | "gap" | "padding"
 type JsonTokenCompositeType = "strokeStyle" | "border" | "transition" | "shadow" | "gradient" | "typography"
 export type JsonTokenType = JsonTokenPrimitiveType | JsonTokenBasicType | JsonTokenCompositeType
