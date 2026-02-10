@@ -1,0 +1,156 @@
+{
+  "$schema": "https://raw.githubusercontent.com/figma-tokens/figma-tokens/main/schemas/v1.json",
+  "name": "Savora - Material3 Lavender Theme",
+  "description": "Color, typography, spacing, radii and elevation tokens for Savora (Material 3 lavender theme).",
+  "tokens": {
+    "color": {
+      "primary": { "value": "#C7A4FF", "type": "color", "description": "Soft Lavender - primary buttons, links" },
+      "primary-variant": { "value": "#9C5FE7", "type": "color", "description": "Medium Violet - headers & accents" },
+      "secondary": { "value": "#5A1CA8", "type": "color", "description": "Deep Purple - nav, icons" },
+      "tertiary": { "value": "#D8B8FF", "type": "color", "description": "Soft pinkish violet - card backgrounds" },
+      "surface": { "value": "#F5ECFF", "type": "color", "description": "Light lilac - elevated cards" },
+      "background": { "value": "#F9F6FF", "type": "color", "description": "Off-white lilac - page background" },
+      "text-primary": { "value": "#1A1A1A", "type": "color", "description": "Primary text" },
+      "text-secondary": { "value": "#3F2B96", "type": "color", "description": "Secondary text / subtext" },
+      "accent": { "value": "#FFD166", "type": "color", "description": "Gold accent - CTA highlights" },
+      "black": { "value": "#000000", "type": "color" },
+      "white": { "value": "#FFFFFF", "type": "color" }
+    },
+    "gradient": {
+      "primary-gradient": {
+        "value": "linear-gradient(135deg, #C7A4FF 0%, #9C5FE7 50%, #5A1CA8 100%)",
+        "type": "gradient",
+        "description": "Primary gradient for onboarding / hero"
+      }
+    },
+    "typography": {
+      "display-medium": {
+        "value": {
+          "fontFamily": "Poppins",
+          "fontWeight": "600",
+          "fontSize": 36,
+          "lineHeight": 44,
+          "letterSpacing": 0
+        },
+        "type": "typography",
+        "description": "Onboarding headline / large display"
+      },
+      "title-medium": {
+        "value": {
+          "fontFamily": "Poppins",
+          "fontWeight": "500",
+          "fontSize": 24,
+          "lineHeight": 32,
+          "letterSpacing": 0
+        },
+        "type": "typography",
+        "description": "Section headers"
+      },
+      "body-medium": {
+        "value": {
+          "fontFamily": "Inter",
+          "fontWeight": "400",
+          "fontSize": 16,
+          "lineHeight": 24,
+          "letterSpacing": 0
+        },
+        "type": "typography",
+        "description": "Body text"
+      },
+      "label-small": {
+        "value": {
+          "fontFamily": "Inter",
+          "fontWeight": "500",
+          "fontSize": 12,
+          "lineHeight": 16,
+          "letterSpacing": 0.2
+        },
+        "type": "typography",
+        "description": "Small labels / tabs"
+      }
+    },
+    "radii": {
+      "radius-sm": { "value": 8, "type": "dimension", "description": "Small rounded corners" },
+      "radius-md": { "value": 16, "type": "dimension", "description": "Card corners" },
+      "radius-lg": { "value": 24, "type": "dimension", "description": "Buttons / large pills" }
+    },
+    "spacing": {
+      "space-1": { "value": 4, "type": "dimension" },
+      "space-2": { "value": 8, "type": "dimension" },
+      "space-3": { "value": 12, "type": "dimension" },
+      "space-4": { "value": 16, "type": "dimension" },
+      "space-5": { "value": 24, "type": "dimension" },
+      "space-6": { "value": 32, "type": "dimension" }
+    },
+    "elevation": {
+      "elevation-1": {
+        "value": {
+          "x": 0,
+          "y": 1,
+          "blur": 2,
+          "spread": 0,
+          "color": "rgba(90,28,168,0.06)"
+        },
+        "type": "boxShadow",
+        "description": "Subtle card shadow"
+      },
+      "elevation-2": {
+        "value": {
+          "x": 0,
+          "y": 6,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(90,28,168,0.12)"
+        },
+        "type": "boxShadow",
+        "description": "Medium elevation (FAB / dialogs)"
+      },
+      "elevation-3": {
+        "value": {
+          "x": 0,
+          "y": 12,
+          "blur": 28,
+          "spread": 0,
+          "color": "rgba(90,28,168,0.18)"
+        },
+        "type": "boxShadow",
+        "description": "High elevation (prominent elements)"
+      }
+    },
+    "components": {
+      "button": {
+        "primary": {
+          "background": "{color.primary-variant}",
+          "text": "{color.white}",
+          "radius": "{radii.radius-lg}",
+          "padding": "{spacing.space-4}"
+        },
+        "secondary": {
+          "background": "{color.surface}",
+          "text": "{color.text-primary}",
+          "border": "1px solid {color.primary-variant}",
+          "radius": "{radii.radius-md}",
+          "padding": "{spacing.space-3}"
+        }
+      },
+      "fab": {
+        "background": "{gradient.primary-gradient}",
+        "foreground": "{color.white}",
+        "radius": 999,
+        "elevation": "{elevation.elevation-2}"
+      },
+      "card": {
+        "background": "{color.surface}",
+        "radius": "{radii.radius-md}",
+        "elevation": "{elevation.elevation-1}",
+        "padding": "{spacing.space-4}"
+      },
+      "input": {
+        "background": "{color.white}",
+        "borderRadius": "{radii.radius-sm}",
+        "borderColor": "{color.tertiary}",
+        "textColor": "{color.text-primary}"
+      }
+    }
+  }
+}
